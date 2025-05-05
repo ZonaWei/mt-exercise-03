@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/Applications/miniconda3/envs/torch3/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/Applications/miniconda3/envs/torch3/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/Users/zona/Desktop/homework/joeynmt-hotfixed/joeynmt/__main__.py", line 61, in <module>
+    main()
+  File "/Users/zona/Desktop/homework/joeynmt-hotfixed/joeynmt/__main__.py", line 41, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/Users/zona/Desktop/homework/joeynmt-hotfixed/joeynmt/training.py", line 794, in train
+    model_dir = make_model_dir(
+  File "/Users/zona/Desktop/homework/joeynmt-hotfixed/joeynmt/helpers.py", line 48, in make_model_dir
+    raise FileExistsError(f"Model directory {model_dir} exists "
+FileExistsError: Model directory /Users/zona/Desktop/homework/mt-exercise-03/models/deen_transformer_pre exists and overwriting is disabled.

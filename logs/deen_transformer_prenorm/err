@@ -1,0 +1,692 @@
+2025-05-05 19:22:04,884 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-05 19:22:04,884 - INFO - joeynmt.helpers -                           cfg.name : deen_transformer_prenorm
+2025-05-05 19:22:04,884 - INFO - joeynmt.helpers -                cfg.joeynmt_version : 2.0.0
+2025-05-05 19:22:04,884 - INFO - joeynmt.helpers -                     cfg.data.train : data/train
+2025-05-05 19:22:04,884 - INFO - joeynmt.helpers -                       cfg.data.dev : data/dev
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -                      cfg.data.test : data/test
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -              cfg.data.dataset_type : plain
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -                  cfg.data.src.lang : de
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -             cfg.data.src.lowercase : False
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -                 cfg.data.src.level : bpe
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -             cfg.data.src.voc_limit : 32000
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -          cfg.data.src.voc_min_freq : 1
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -            cfg.data.src.max_length : 100
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -              cfg.data.src.voc_file : shared_models/joint-vocab.txt
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -        cfg.data.src.tokenizer_type : subword-nmt
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers - cfg.data.src.tokenizer_cfg.pretokenizer : none
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers - cfg.data.src.tokenizer_cfg.num_merges : 3200
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -   cfg.data.src.tokenizer_cfg.codes : data/codes3200.bpe
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -                  cfg.data.trg.lang : en
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -             cfg.data.trg.lowercase : False
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -                 cfg.data.trg.level : bpe
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -             cfg.data.trg.voc_limit : 32000
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -          cfg.data.trg.voc_min_freq : 1
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -            cfg.data.trg.max_length : 100
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -              cfg.data.trg.voc_file : shared_models/joint-vocab.txt
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -        cfg.data.trg.tokenizer_type : subword-nmt
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers - cfg.data.trg.tokenizer_cfg.pretokenizer : none
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers - cfg.data.trg.tokenizer_cfg.num_merges : 3200
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -   cfg.data.trg.tokenizer_cfg.codes : data/codes3200.bpe
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -              cfg.testing.beam_size : 5
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -             cfg.testing.beam_alpha : 1.0
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -           cfg.training.random_seed : 42
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -             cfg.training.optimizer : adam
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -         cfg.training.normalization : tokens
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -         cfg.training.learning_rate : 0.0003
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -            cfg.training.batch_size : 2048
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -            cfg.training.batch_type : token
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -       cfg.training.eval_batch_size : 1024
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -       cfg.training.eval_batch_type : token
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -            cfg.training.scheduling : plateau
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -              cfg.training.patience : 8
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -          cfg.training.weight_decay : 0.0
+2025-05-05 19:22:04,885 - INFO - joeynmt.helpers -       cfg.training.decrease_factor : 0.7
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers - cfg.training.early_stopping_metric : ppl
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -                cfg.training.epochs : 10
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -       cfg.training.validation_freq : 500
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -          cfg.training.logging_freq : 100
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -           cfg.training.eval_metric : ['bleu']
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -             cfg.training.model_dir : models/deen_transformer_prenorm
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -             cfg.training.overwrite : True
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -               cfg.training.shuffle : True
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -              cfg.training.use_cuda : True
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -     cfg.training.max_output_length : 100
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -     cfg.training.print_valid_sents : [0, 1, 2, 3, 4]
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -       cfg.training.label_smoothing : 0.3
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -              cfg.model.initializer : xavier_uniform
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -         cfg.model.bias_initializer : zeros
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -         cfg.model.normalize_before : True
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -                cfg.model.init_gain : 1.0
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -        cfg.model.embed_initializer : xavier_uniform
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -          cfg.model.embed_init_gain : 1.0
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -          cfg.model.tied_embeddings : True
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -             cfg.model.tied_softmax : True
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -             cfg.model.encoder.type : transformer
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -       cfg.model.encoder.num_layers : 4
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -        cfg.model.encoder.num_heads : 2
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -       cfg.model.encoder.layer_norm : pre
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.embedding_dim : 256
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.scale : True
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers - cfg.model.encoder.embeddings.dropout : 0
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -      cfg.model.encoder.hidden_size : 256
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -          cfg.model.encoder.ff_size : 512
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -          cfg.model.encoder.dropout : 0
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -             cfg.model.decoder.type : transformer
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -       cfg.model.decoder.num_layers : 1
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -        cfg.model.decoder.num_heads : 2
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -       cfg.model.decoder.layer_norm : pre
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.embedding_dim : 256
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.scale : True
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers - cfg.model.decoder.embeddings.dropout : 0
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -      cfg.model.decoder.hidden_size : 256
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -          cfg.model.decoder.ff_size : 512
+2025-05-05 19:22:04,886 - INFO - joeynmt.helpers -          cfg.model.decoder.dropout : 0
+2025-05-05 19:22:04,889 - INFO - joeynmt.data - Building tokenizer...
+2025-05-05 19:22:04,896 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, 100), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-05 19:22:04,896 - INFO - joeynmt.tokenizers - en tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, 100), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-05 19:22:04,896 - INFO - joeynmt.data - Loading train set...
+2025-05-05 19:22:05,070 - INFO - joeynmt.data - Building vocabulary...
+2025-05-05 19:22:05,198 - INFO - joeynmt.data - Loading dev set...
+2025-05-05 19:22:05,199 - INFO - joeynmt.data - Loading test set...
+2025-05-05 19:22:05,204 - INFO - joeynmt.data - Data loaded.
+2025-05-05 19:22:05,204 - INFO - joeynmt.data - Train dataset: PlaintextDataset(split=train, len=100000, src_lang=de, trg_lang=en, has_trg=True, random_subset=-1)
+2025-05-05 19:22:05,204 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=500, src_lang=de, trg_lang=en, has_trg=True, random_subset=-1)
+2025-05-05 19:22:05,204 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=2999, src_lang=de, trg_lang=en, has_trg=True, random_subset=-1)
+2025-05-05 19:22:05,205 - INFO - joeynmt.data - First training example:
+	[SRC] gem@@ ä@@ ß der vom Europäischen Parlament und von der gesam@@ ten Europäischen Union n@@ un@@ mehr ständi@@ g ver@@ tre@@ ten@@ en Lin@@ ie möchte ich Sie jedoch bit@@ ten , den gan@@ zen Ein@@ f@@ lu@@ ß Ih@@ res Am@@ tes und der Institu@@ tion , die Sie ver@@ treten , bei dem Prä@@ sident@@ schaf@@ ts@@ kan@@ di@@ d@@ aten und G@@ ou@@ ver@@ ne@@ ur von Tex@@ as , Ge@@ or@@ ge W@@ . B@@ us@@ h , der zur Aus@@ setzung der V@@ oll@@ stre@@ ck@@ ung des To@@ des@@ ur@@ teil@@ s und zur Be@@ gn@@ a@@ di@@ gung des Ver@@ ur@@ teil@@ ten be@@ fu@@ gt ist , gel@@ ten@@ d zu machen .
+	[TRG] however , I would ask you , in acc@@ ord@@ ance with the line which is now con@@ st@@ ant@@ ly fol@@ low@@ ed by the European Parliament and by the whole of the European Community , to make represent@@ ations , using the wei@@ ght of your pres@@ ti@@ gi@@ ous off@@ ice and the institu@@ tion you re@@ present , to the President and to the Go@@ vern@@ or of Tex@@ as , Mr B@@ us@@ h , who has the power to order a stay of ex@@ ec@@ ution and to re@@ pri@@ e@@ ve the con@@ dem@@ ned per@@ son .
+2025-05-05 19:22:05,205 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) . (6) the (7) in (8) die (9) der
+2025-05-05 19:22:05,205 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) . (6) the (7) in (8) die (9) der
+2025-05-05 19:22:05,205 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4117
+2025-05-05 19:22:05,206 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4117
+2025-05-05 19:22:05,207 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-05 19:22:05,299 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-05 19:22:05,301 - INFO - joeynmt.model - Total params: 3954176
+2025-05-05 19:22:05,301 - INFO - joeynmt.training - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4117),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4117),
+	loss_function=XentLoss(criterion=KLDivLoss(), smoothing=0.3))
+2025-05-05 19:22:05,302 - INFO - joeynmt.builders - Adam(lr=0.0003, weight_decay=0.0, betas=(0.9, 0.999))
+2025-05-05 19:22:05,302 - INFO - joeynmt.builders - ReduceLROnPlateau(mode=min, verbose=False, threshold_mode=abs, eps=0.0, factor=0.7, patience=8)
+2025-05-05 19:22:05,302 - INFO - joeynmt.training - Train stats:
+	device: cpu
+	n_gpu: 0
+	16-bits training: False
+	gradient accumulation: 1
+	batch size per device: 2048
+	effective batch size (w. parallel & accumulation): 2048
+2025-05-05 19:22:05,302 - INFO - joeynmt.training - EPOCH 1
+2025-05-05 19:22:53,191 - INFO - joeynmt.training - Epoch   1, Step:      100, Batch Loss:     4.209301, Batch Acc: 0.064407, Tokens per Sec:     1922, Lr: 0.000300
+2025-05-05 19:23:41,571 - INFO - joeynmt.training - Epoch   1, Step:      200, Batch Loss:     3.969632, Batch Acc: 0.093044, Tokens per Sec:     1906, Lr: 0.000300
+2025-05-05 19:24:31,519 - INFO - joeynmt.training - Epoch   1, Step:      300, Batch Loss:     3.776981, Batch Acc: 0.106811, Tokens per Sec:     1853, Lr: 0.000300
+2025-05-05 19:25:21,066 - INFO - joeynmt.training - Epoch   1, Step:      400, Batch Loss:     3.735933, Batch Acc: 0.114521, Tokens per Sec:     1851, Lr: 0.000300
+2025-05-05 19:26:12,529 - INFO - joeynmt.training - Epoch   1, Step:      500, Batch Loss:     3.630661, Batch Acc: 0.127495, Tokens per Sec:     1803, Lr: 0.000300
+2025-05-05 19:26:12,530 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   5%|▌         | 26/500 [00:10<03:10,  2.48it/s]Predicting...:   9%|▊         | 43/500 [00:14<02:21,  3.23it/s]Predicting...:  12%|█▏        | 62/500 [00:19<02:13,  3.28it/s]Predicting...:  16%|█▋        | 82/500 [00:23<01:49,  3.82it/s]Predicting...:  21%|██        | 105/500 [00:28<01:32,  4.26it/s]Predicting...:  25%|██▌       | 126/500 [00:32<01:26,  4.32it/s]Predicting...:  30%|██▉       | 149/500 [00:37<01:16,  4.59it/s]Predicting...:  33%|███▎      | 165/500 [00:42<01:21,  4.13it/s]Predicting...:  36%|███▌      | 181/500 [00:47<01:23,  3.84it/s]Predicting...:  40%|████      | 201/500 [00:54<01:28,  3.37it/s]Predicting...:  44%|████▍     | 222/500 [01:00<01:22,  3.39it/s]Predicting...:  50%|████▉     | 248/500 [01:05<01:03,  3.94it/s]Predicting...:  54%|█████▍    | 272/500 [01:09<00:52,  4.34it/s]Predicting...:  59%|█████▉    | 297/500 [01:14<00:43,  4.62it/s]Predicting...:  63%|██████▎   | 317/500 [01:20<00:43,  4.25it/s]Predicting...:  69%|██████▉   | 346/500 [01:25<00:33,  4.64it/s]Predicting...:  73%|███████▎  | 366/500 [01:29<00:28,  4.73it/s]Predicting...:  80%|████████  | 400/500 [01:35<00:19,  5.14it/s]Predicting...:  86%|████████▌ | 429/500 [01:42<00:14,  4.77it/s]Predicting...:  89%|████████▉ | 447/500 [01:44<00:10,  5.25it/s]Predicting...:  93%|█████████▎| 465/500 [01:47<00:06,  5.36it/s]Predicting...:  97%|█████████▋| 486/500 [01:51<00:02,  5.33it/s]Predicting...: 100%|██████████| 500/500 [01:54<00:00,  5.42it/s]Predicting...: 100%|██████████| 500/500 [01:54<00:00,  4.39it/s]
+2025-05-05 19:28:06,582 - INFO - joeynmt.prediction - Evaluation result (greedy) loss:   3.80, ppl:  44.85, acc:   0.11, generation: 114.0395[sec], evaluation: 0.0000[sec]
+2025-05-05 19:28:06,586 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2025-05-05 19:28:06,747 - INFO - joeynmt.training - Example #0
+2025-05-05 19:28:06,747 - INFO - joeynmt.training - 	Source:     die Premierminister Indiens und Japans trafen sich in Tokio .
+2025-05-05 19:28:06,747 - INFO - joeynmt.training - 	Reference:  India and Japan prime ministers meet in Tokyo
+2025-05-05 19:28:06,747 - INFO - joeynmt.training - 	Hypothesis: the Commission is the Commission is is a a a a a a ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccs .
+2025-05-05 19:28:06,747 - INFO - joeynmt.training - Example #1
+2025-05-05 19:28:06,748 - INFO - joeynmt.training - 	Source:     Indiens neuer Premierminister Narendra Modi trifft bei seinem ersten wichtigen Auslandsbesuch seit seinem Wahlsieg im Mai seinen japanischen Amtskollegen Shinzo Abe in Toko , um wirtschaftliche und sicherheitspolitische Beziehungen zu besprechen .
+2025-05-05 19:28:06,748 - INFO - joeynmt.training - 	Reference:  India &apos;s new prime minister , Narendra Modi , is meeting his Japanese counterpart , Shinzo Abe , in Tokyo to discuss economic and security ties , on his first major foreign visit since winning May &apos;s election .
+2025-05-05 19:28:06,748 - INFO - joeynmt.training - 	Hypothesis: the Commission is the Commission of the Commission of the Commission of the Commission of the European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European European Union .
+2025-05-05 19:28:06,748 - INFO - joeynmt.training - Example #2
+2025-05-05 19:28:06,748 - INFO - joeynmt.training - 	Source:     Herr Modi befindet sich auf einer fünftägigen Reise nach Japan , um die wirtschaftlichen Beziehungen mit der drittgrößten Wirtschaftsnation der Welt zu festigen .
+2025-05-05 19:28:06,748 - INFO - joeynmt.training - 	Reference:  Mr Modi is on a five @-@ day trip to Japan to strengthen economic ties with the third largest economy in the world .
+2025-05-05 19:28:06,748 - INFO - joeynmt.training - 	Hypothesis: the Commission is the Commission is is the Commission of the Commission of the Commission of the Commission of the Commission of the Commission of the European European European European European European European European European Union .
+2025-05-05 19:28:06,748 - INFO - joeynmt.training - Example #3
+2025-05-05 19:28:06,749 - INFO - joeynmt.training - 	Source:     Pläne für eine stärkere kerntechnische Zusammenarbeit stehen ganz oben auf der Tagesordnung .
+2025-05-05 19:28:06,749 - INFO - joeynmt.training - 	Reference:  high on the agenda are plans for greater nuclear co @-@ operation .
+2025-05-05 19:28:06,749 - INFO - joeynmt.training - 	Hypothesis: the Commission is the Commission is is a a a a a a a is a .
+2025-05-05 19:28:06,749 - INFO - joeynmt.training - Example #4
+2025-05-05 19:28:06,749 - INFO - joeynmt.training - 	Source:     Berichten zufolge hofft Indien darüber hinaus auf einen Vertrag zur Verteidigungszusammenarbeit zwischen den beiden Nationen .
+2025-05-05 19:28:06,749 - INFO - joeynmt.training - 	Reference:  India is also reportedly hoping for a deal on defence collaboration between the two nations .
+2025-05-05 19:28:06,749 - INFO - joeynmt.training - 	Hypothesis: the Commission is the Commission is is the Commission of the Commission of the Commission of the Commission of the Commission .
+2025-05-05 19:29:02,827 - INFO - joeynmt.training - Epoch   1, Step:      600, Batch Loss:     3.537881, Batch Acc: 0.149319, Tokens per Sec:     1668, Lr: 0.000300
+2025-05-05 19:29:59,413 - INFO - joeynmt.training - Epoch   1, Step:      700, Batch Loss:     3.287663, Batch Acc: 0.166400, Tokens per Sec:     1635, Lr: 0.000300
+2025-05-05 19:30:53,402 - INFO - joeynmt.training - Epoch   1, Step:      800, Batch Loss:     3.295051, Batch Acc: 0.177345, Tokens per Sec:     1696, Lr: 0.000300
+2025-05-05 19:31:48,126 - INFO - joeynmt.training - Epoch   1, Step:      900, Batch Loss:     3.060996, Batch Acc: 0.190741, Tokens per Sec:     1661, Lr: 0.000300
+2025-05-05 19:32:44,722 - INFO - joeynmt.training - Epoch   1, Step:     1000, Batch Loss:     3.080478, Batch Acc: 0.195899, Tokens per Sec:     1661, Lr: 0.000300
+2025-05-05 19:32:44,724 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   5%|▌         | 26/500 [00:11<03:26,  2.30it/s]Predicting...:   9%|▊         | 43/500 [00:25<04:47,  1.59it/s]Predicting...:  12%|█▏        | 62/500 [00:37<04:37,  1.58it/s]Predicting...:  16%|█▋        | 82/500 [00:49<04:15,  1.64it/s]Predicting...:  21%|██        | 105/500 [01:00<03:43,  1.77it/s]Predicting...:  25%|██▌       | 126/500 [01:11<03:24,  1.83it/s]Predicting...:  30%|██▉       | 149/500 [01:20<02:56,  1.99it/s]Predicting...:  33%|███▎      | 165/500 [01:35<03:21,  1.66it/s]Predicting...:  36%|███▌      | 181/500 [01:49<03:38,  1.46it/s]Predicting...:  40%|████      | 201/500 [01:59<03:05,  1.61it/s]Predicting...:  44%|████▍     | 222/500 [02:09<02:40,  1.73it/s]Predicting...:  50%|████▉     | 248/500 [02:16<01:54,  2.20it/s]Predicting...:  54%|█████▍    | 272/500 [02:22<01:29,  2.54it/s]Predicting...:  59%|█████▉    | 297/500 [02:31<01:16,  2.65it/s]Predicting...:  63%|██████▎   | 317/500 [02:38<01:08,  2.68it/s]Predicting...:  69%|██████▉   | 346/500 [02:46<00:52,  2.94it/s]Predicting...:  73%|███████▎  | 366/500 [02:58<00:55,  2.43it/s]Predicting...:  80%|████████  | 400/500 [03:05<00:32,  3.09it/s]Predicting...:  86%|████████▌ | 429/500 [03:12<00:21,  3.32it/s]Predicting...:  89%|████████▉ | 447/500 [03:24<00:20,  2.60it/s]Predicting...:  93%|█████████▎| 465/500 [03:31<00:13,  2.58it/s]Predicting...:  97%|█████████▋| 486/500 [03:42<00:05,  2.40it/s]Predicting...: 100%|██████████| 500/500 [03:46<00:00,  2.49it/s]Predicting...: 100%|██████████| 500/500 [03:46<00:00,  2.20it/s]
+2025-05-05 19:36:31,664 - INFO - joeynmt.prediction - Evaluation result (greedy) loss:   3.43, ppl:  30.79, acc:   0.16, generation: 226.9206[sec], evaluation: 0.0000[sec]
+2025-05-05 19:36:31,668 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2025-05-05 19:36:31,848 - INFO - joeynmt.training - Example #0
+2025-05-05 19:36:31,849 - INFO - joeynmt.training - 	Source:     die Premierminister Indiens und Japans trafen sich in Tokio .
+2025-05-05 19:36:31,849 - INFO - joeynmt.training - 	Reference:  India and Japan prime ministers meet in Tokyo
+2025-05-05 19:36:31,849 - INFO - joeynmt.training - 	Hypothesis: the restaurant is a page of the SSSSSSSSSSSSSSSSececececececececececececececececece .
+2025-05-05 19:36:31,849 - INFO - joeynmt.training - Example #1
+2025-05-05 19:36:31,849 - INFO - joeynmt.training - 	Source:     Indiens neuer Premierminister Narendra Modi trifft bei seinem ersten wichtigen Auslandsbesuch seit seinem Wahlsieg im Mai seinen japanischen Amtskollegen Shinzo Abe in Toko , um wirtschaftliche und sicherheitspolitische Beziehungen zu besprechen .
+2025-05-05 19:36:31,849 - INFO - joeynmt.training - 	Reference:  India &apos;s new prime minister , Narendra Modi , is meeting his Japanese counterpart , Shinzo Abe , in Tokyo to discuss economic and security ties , on his first major foreign visit since winning May &apos;s election .
+2025-05-05 19:36:31,849 - INFO - joeynmt.training - 	Hypothesis: the rerererererererererererererererererererererererererererererererererererererererererererestaurant , the rerererererererererereached in the rerererererererererererererements .
+2025-05-05 19:36:31,850 - INFO - joeynmt.training - Example #2
+2025-05-05 19:36:31,850 - INFO - joeynmt.training - 	Source:     Herr Modi befindet sich auf einer fünftägigen Reise nach Japan , um die wirtschaftlichen Beziehungen mit der drittgrößten Wirtschaftsnation der Welt zu festigen .
+2025-05-05 19:36:31,850 - INFO - joeynmt.training - 	Reference:  Mr Modi is on a five @-@ day trip to Japan to strengthen economic ties with the third largest economy in the world .
+2025-05-05 19:36:31,850 - INFO - joeynmt.training - 	Hypothesis: Mr President , Mr President , the European Union is a few members of the rerererererererererererererererererestaurant .
+2025-05-05 19:36:31,850 - INFO - joeynmt.training - Example #3
+2025-05-05 19:36:31,850 - INFO - joeynmt.training - 	Source:     Pläne für eine stärkere kerntechnische Zusammenarbeit stehen ganz oben auf der Tagesordnung .
+2025-05-05 19:36:31,850 - INFO - joeynmt.training - 	Reference:  high on the agenda are plans for greater nuclear co @-@ operation .
+2025-05-05 19:36:31,850 - INFO - joeynmt.training - 	Hypothesis: -LRB- PPecece is a is a few members of the rererererererererererererestaurant .
+2025-05-05 19:36:31,851 - INFO - joeynmt.training - Example #4
+2025-05-05 19:36:31,851 - INFO - joeynmt.training - 	Source:     Berichten zufolge hofft Indien darüber hinaus auf einen Vertrag zur Verteidigungszusammenarbeit zwischen den beiden Nationen .
+2025-05-05 19:36:31,851 - INFO - joeynmt.training - 	Reference:  India is also reportedly hoping for a deal on defence collaboration between the two nations .
+2025-05-05 19:36:31,851 - INFO - joeynmt.training - 	Hypothesis: the rerestaurant is a few butely to be a few butely to the rerererererererererererererererestaurant .
+2025-05-05 19:37:26,647 - INFO - joeynmt.training - Epoch   1, Step:     1100, Batch Loss:     3.195691, Batch Acc: 0.204185, Tokens per Sec:     1671, Lr: 0.000300
+2025-05-05 19:38:25,242 - INFO - joeynmt.training - Epoch   1, Step:     1200, Batch Loss:     3.093807, Batch Acc: 0.210649, Tokens per Sec:     1581, Lr: 0.000300
+2025-05-05 19:39:26,071 - INFO - joeynmt.training - Epoch   1, Step:     1300, Batch Loss:     3.031037, Batch Acc: 0.215259, Tokens per Sec:     1512, Lr: 0.000300
+2025-05-05 19:40:31,307 - INFO - joeynmt.training - Epoch   1, Step:     1400, Batch Loss:     2.982705, Batch Acc: 0.220846, Tokens per Sec:     1403, Lr: 0.000300
+2025-05-05 19:41:30,691 - INFO - joeynmt.training - Epoch   1, Step:     1500, Batch Loss:     2.967395, Batch Acc: 0.230393, Tokens per Sec:     1532, Lr: 0.000300
+2025-05-05 19:41:30,692 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   5%|▌         | 26/500 [00:10<03:18,  2.39it/s]Predicting...:   9%|▊         | 43/500 [00:24<04:30,  1.69it/s]Predicting...:  12%|█▏        | 62/500 [00:28<03:11,  2.28it/s]Predicting...:  16%|█▋        | 82/500 [00:40<03:27,  2.02it/s]Predicting...:  21%|██        | 105/500 [00:44<02:27,  2.68it/s]Predicting...:  25%|██▌       | 126/500 [00:54<02:34,  2.43it/s]Predicting...:  30%|██▉       | 149/500 [01:03<02:23,  2.45it/s]Predicting...:  33%|███▎      | 165/500 [01:17<02:52,  1.94it/s]Predicting...:  36%|███▌      | 181/500 [01:30<03:12,  1.66it/s]Predicting...:  40%|████      | 201/500 [01:38<02:38,  1.88it/s]Predicting...:  44%|████▍     | 222/500 [01:47<02:19,  2.00it/s]Predicting...:  50%|████▉     | 248/500 [01:53<01:41,  2.48it/s]Predicting...:  54%|█████▍    | 272/500 [01:59<01:20,  2.85it/s]Predicting...:  59%|█████▉    | 297/500 [02:03<00:57,  3.53it/s]Predicting...:  63%|██████▎   | 317/500 [02:10<00:55,  3.31it/s]Predicting...:  69%|██████▉   | 346/500 [02:17<00:44,  3.48it/s]Predicting...:  73%|███████▎  | 366/500 [02:24<00:39,  3.36it/s]Predicting...:  80%|████████  | 400/500 [02:30<00:25,  3.95it/s]Predicting...:  86%|████████▌ | 429/500 [02:38<00:18,  3.81it/s]Predicting...:  89%|████████▉ | 447/500 [02:44<00:14,  3.54it/s]Predicting...:  93%|█████████▎| 465/500 [02:53<00:11,  3.06it/s]Predicting...:  97%|█████████▋| 486/500 [03:05<00:05,  2.53it/s]Predicting...: 100%|██████████| 500/500 [03:10<00:00,  2.55it/s]Predicting...: 100%|██████████| 500/500 [03:10<00:00,  2.62it/s]
+2025-05-05 19:44:41,263 - INFO - joeynmt.prediction - Evaluation result (greedy) loss:   3.27, ppl:  26.38, acc:   0.18, generation: 190.5559[sec], evaluation: 0.0000[sec]
+2025-05-05 19:44:41,268 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2025-05-05 19:44:41,485 - INFO - joeynmt.training - Example #0
+2025-05-05 19:44:41,486 - INFO - joeynmt.training - 	Source:     die Premierminister Indiens und Japans trafen sich in Tokio .
+2025-05-05 19:44:41,486 - INFO - joeynmt.training - 	Reference:  India and Japan prime ministers meet in Tokyo
+2025-05-05 19:44:41,486 - INFO - joeynmt.training - 	Hypothesis: the hotel is a very very very very and and the relaxing .
+2025-05-05 19:44:41,486 - INFO - joeynmt.training - Example #1
+2025-05-05 19:44:41,487 - INFO - joeynmt.training - 	Source:     Indiens neuer Premierminister Narendra Modi trifft bei seinem ersten wichtigen Auslandsbesuch seit seinem Wahlsieg im Mai seinen japanischen Amtskollegen Shinzo Abe in Toko , um wirtschaftliche und sicherheitspolitische Beziehungen zu besprechen .
+2025-05-05 19:44:41,487 - INFO - joeynmt.training - 	Reference:  India &apos;s new prime minister , Narendra Modi , is meeting his Japanese counterpart , Shinzo Abe , in Tokyo to discuss economic and security ties , on his first major foreign visit since winning May &apos;s election .
+2025-05-05 19:44:41,487 - INFO - joeynmt.training - 	Hypothesis: the hotel is a very very very very very very very very very very very very of the Cananananananananandididialogue , and the relaxing of the Cananananananandididialogue and the rest of the world .
+2025-05-05 19:44:41,487 - INFO - joeynmt.training - Example #2
+2025-05-05 19:44:41,487 - INFO - joeynmt.training - 	Source:     Herr Modi befindet sich auf einer fünftägigen Reise nach Japan , um die wirtschaftlichen Beziehungen mit der drittgrößten Wirtschaftsnation der Welt zu festigen .
+2025-05-05 19:44:41,487 - INFO - joeynmt.training - 	Reference:  Mr Modi is on a five @-@ day trip to Japan to strengthen economic ties with the third largest economy in the world .
+2025-05-05 19:44:41,487 - INFO - joeynmt.training - 	Hypothesis: Mr President , the Commission , the Commission has been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been been
+2025-05-05 19:44:41,487 - INFO - joeynmt.training - Example #3
+2025-05-05 19:44:41,488 - INFO - joeynmt.training - 	Source:     Pläne für eine stärkere kerntechnische Zusammenarbeit stehen ganz oben auf der Tagesordnung .
+2025-05-05 19:44:41,488 - INFO - joeynmt.training - 	Reference:  high on the agenda are plans for greater nuclear co @-@ operation .
+2025-05-05 19:44:41,488 - INFO - joeynmt.training - 	Hypothesis: the relaxed in the Member States , and the EU &apos;s &apos;s &apos;s &apos;s &apos;s &apos;s &apos;s &apos;s &apos;s &apos;s puuually .
+2025-05-05 19:44:41,488 - INFO - joeynmt.training - Example #4
+2025-05-05 19:44:41,488 - INFO - joeynmt.training - 	Source:     Berichten zufolge hofft Indien darüber hinaus auf einen Vertrag zur Verteidigungszusammenarbeit zwischen den beiden Nationen .
+2025-05-05 19:44:41,489 - INFO - joeynmt.training - 	Reference:  India is also reportedly hoping for a deal on defence collaboration between the two nations .
+2025-05-05 19:44:41,489 - INFO - joeynmt.training - 	Hypothesis: the same time , the rererererely to be able to the rererelevant .
+2025-05-05 19:45:47,960 - INFO - joeynmt.training - Epoch   1, Step:     1600, Batch Loss:     2.965857, Batch Acc: 0.235247, Tokens per Sec:     1400, Lr: 0.000300
+2025-05-05 19:46:47,663 - INFO - joeynmt.training - Epoch   1, Step:     1700, Batch Loss:     2.881388, Batch Acc: 0.240394, Tokens per Sec:     1524, Lr: 0.000300
+2025-05-05 19:47:42,369 - INFO - joeynmt.training - Epoch   1, Step:     1800, Batch Loss:     2.903783, Batch Acc: 0.242906, Tokens per Sec:     1676, Lr: 0.000300
+2025-05-05 19:48:37,746 - INFO - joeynmt.training - Epoch   1, Step:     1900, Batch Loss:     2.851282, Batch Acc: 0.251740, Tokens per Sec:     1661, Lr: 0.000300
+2025-05-05 19:49:33,026 - INFO - joeynmt.training - Epoch   1, Step:     2000, Batch Loss:     2.774763, Batch Acc: 0.255184, Tokens per Sec:     1654, Lr: 0.000300
+2025-05-05 19:49:33,027 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   5%|▌         | 26/500 [00:06<02:05,  3.78it/s]Predicting...:   9%|▊         | 43/500 [00:19<03:52,  1.97it/s]Predicting...:  12%|█▏        | 62/500 [00:24<02:49,  2.59it/s]Predicting...:  16%|█▋        | 82/500 [00:34<03:04,  2.26it/s]Predicting...:  21%|██        | 105/500 [00:44<02:49,  2.32it/s]Predicting...:  25%|██▌       | 126/500 [00:54<02:45,  2.27it/s]Predicting...:  30%|██▉       | 149/500 [01:02<02:27,  2.38it/s]Predicting...:  33%|███▎      | 165/500 [01:05<02:00,  2.78it/s]Predicting...:  36%|███▌      | 181/500 [01:18<02:32,  2.10it/s]Predicting...:  40%|████      | 201/500 [01:25<02:11,  2.27it/s]Predicting...:  44%|████▍     | 222/500 [01:34<02:01,  2.29it/s]Predicting...:  50%|████▉     | 248/500 [01:40<01:30,  2.79it/s]Predicting...:  54%|█████▍    | 272/500 [01:46<01:12,  3.13it/s]Predicting...:  59%|█████▉    | 297/500 [01:54<01:05,  3.11it/s]Predicting...:  63%|██████▎   | 317/500 [02:01<00:59,  3.05it/s]Predicting...:  69%|██████▉   | 346/500 [02:08<00:46,  3.32it/s]Predicting...:  73%|███████▎  | 366/500 [02:12<00:36,  3.69it/s]Predicting...:  80%|████████  | 400/500 [02:16<00:20,  4.84it/s]Predicting...:  86%|████████▌ | 429/500 [02:18<00:12,  5.89it/s]Predicting...:  89%|████████▉ | 447/500 [02:23<00:10,  5.29it/s]Predicting...:  93%|█████████▎| 465/500 [02:26<00:06,  5.54it/s]Predicting...:  97%|█████████▋| 486/500 [02:34<00:03,  4.03it/s]Predicting...: 100%|██████████| 500/500 [02:39<00:00,  3.80it/s]Predicting...: 100%|██████████| 500/500 [02:39<00:00,  3.14it/s]
+2025-05-05 19:52:12,313 - INFO - joeynmt.prediction - Evaluation result (greedy) loss:   3.16, ppl:  23.59, acc:   0.20, generation: 159.2719[sec], evaluation: 0.0000[sec]
+2025-05-05 19:52:12,316 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2025-05-05 19:52:12,514 - INFO - joeynmt.training - Example #0
+2025-05-05 19:52:12,514 - INFO - joeynmt.training - 	Source:     die Premierminister Indiens und Japans trafen sich in Tokio .
+2025-05-05 19:52:12,514 - INFO - joeynmt.training - 	Reference:  India and Japan prime ministers meet in Tokyo
+2025-05-05 19:52:12,514 - INFO - joeynmt.training - 	Hypothesis: the back-blllack and the Syyyyle .
+2025-05-05 19:52:12,515 - INFO - joeynmt.training - Example #1
+2025-05-05 19:52:12,515 - INFO - joeynmt.training - 	Source:     Indiens neuer Premierminister Narendra Modi trifft bei seinem ersten wichtigen Auslandsbesuch seit seinem Wahlsieg im Mai seinen japanischen Amtskollegen Shinzo Abe in Toko , um wirtschaftliche und sicherheitspolitische Beziehungen zu besprechen .
+2025-05-05 19:52:12,515 - INFO - joeynmt.training - 	Reference:  India &apos;s new prime minister , Narendra Modi , is meeting his Japanese counterpart , Shinzo Abe , in Tokyo to discuss economic and security ties , on his first major foreign visit since winning May &apos;s election .
+2025-05-05 19:52:12,515 - INFO - joeynmt.training - 	Hypothesis: the first of the Caaain the Caaaain the first of the first of the first of the first first of the Caaain the Caaain the Caaain the Caaaain the Caaain the Caaain the same time .
+2025-05-05 19:52:12,515 - INFO - joeynmt.training - Example #2
+2025-05-05 19:52:12,516 - INFO - joeynmt.training - 	Source:     Herr Modi befindet sich auf einer fünftägigen Reise nach Japan , um die wirtschaftlichen Beziehungen mit der drittgrößten Wirtschaftsnation der Welt zu festigen .
+2025-05-05 19:52:12,516 - INFO - joeynmt.training - 	Reference:  Mr Modi is on a five @-@ day trip to Japan to strengthen economic ties with the third largest economy in the world .
+2025-05-05 19:52:12,516 - INFO - joeynmt.training - 	Hypothesis: Mr President , the restrict of a new copinion , the rest of the EU &apos;s property of the EU &apos;s property of the European Union .
+2025-05-05 19:52:12,516 - INFO - joeynmt.training - Example #3
+2025-05-05 19:52:12,516 - INFO - joeynmt.training - 	Source:     Pläne für eine stärkere kerntechnische Zusammenarbeit stehen ganz oben auf der Tagesordnung .
+2025-05-05 19:52:12,516 - INFO - joeynmt.training - 	Reference:  high on the agenda are plans for greater nuclear co @-@ operation .
+2025-05-05 19:52:12,516 - INFO - joeynmt.training - 	Hypothesis: the new new new Member States for a new new Member States .
+2025-05-05 19:52:12,516 - INFO - joeynmt.training - Example #4
+2025-05-05 19:52:12,517 - INFO - joeynmt.training - 	Source:     Berichten zufolge hofft Indien darüber hinaus auf einen Vertrag zur Verteidigungszusammenarbeit zwischen den beiden Nationen .
+2025-05-05 19:52:12,517 - INFO - joeynmt.training - 	Reference:  India is also reportedly hoping for a deal on defence collaboration between the two nations .
+2025-05-05 19:52:12,517 - INFO - joeynmt.training - 	Hypothesis: the first of the reflected to the reform of the rereform of the new new new new new new new new new new .
+2025-05-05 19:53:06,003 - INFO - joeynmt.training - Epoch   1, Step:     2100, Batch Loss:     2.727312, Batch Acc: 0.260519, Tokens per Sec:     1714, Lr: 0.000300
+2025-05-05 19:53:59,761 - INFO - joeynmt.training - Epoch   1, Step:     2200, Batch Loss:     2.761600, Batch Acc: 0.262938, Tokens per Sec:     1699, Lr: 0.000300
+2025-05-05 19:54:53,482 - INFO - joeynmt.training - Epoch   1, Step:     2300, Batch Loss:     2.987957, Batch Acc: 0.265250, Tokens per Sec:     1699, Lr: 0.000300
+2025-05-05 19:55:47,281 - INFO - joeynmt.training - Epoch   1, Step:     2400, Batch Loss:     2.828610, Batch Acc: 0.277604, Tokens per Sec:     1669, Lr: 0.000300
+2025-05-05 19:56:41,692 - INFO - joeynmt.training - Epoch   1, Step:     2500, Batch Loss:     2.804913, Batch Acc: 0.274029, Tokens per Sec:     1655, Lr: 0.000300
+2025-05-05 19:56:41,694 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   5%|▌         | 26/500 [00:03<01:00,  7.82it/s]Predicting...:   9%|▊         | 43/500 [00:16<03:17,  2.31it/s]Predicting...:  12%|█▏        | 62/500 [00:20<02:26,  2.99it/s]Predicting...:  16%|█▋        | 82/500 [00:30<02:50,  2.44it/s]Predicting...:  21%|██        | 105/500 [00:40<02:41,  2.44it/s]Predicting...:  25%|██▌       | 126/500 [00:49<02:39,  2.34it/s]Predicting...:  30%|██▉       | 149/500 [00:58<02:24,  2.43it/s]Predicting...:  33%|███▎      | 165/500 [01:11<02:50,  1.97it/s]Predicting...:  36%|███▌      | 181/500 [01:23<03:07,  1.71it/s]Predicting...:  40%|████      | 201/500 [01:31<02:33,  1.94it/s]Predicting...:  44%|████▍     | 222/500 [01:40<02:15,  2.06it/s]Predicting...:  50%|████▉     | 248/500 [01:46<01:38,  2.56it/s]Predicting...:  54%|█████▍    | 272/500 [01:51<01:18,  2.92it/s]Predicting...:  59%|█████▉    | 297/500 [02:00<01:08,  2.97it/s]Predicting...:  63%|██████▎   | 317/500 [02:06<01:01,  2.95it/s]Predicting...:  69%|██████▉   | 346/500 [02:14<00:47,  3.24it/s]Predicting...:  73%|███████▎  | 366/500 [02:25<00:49,  2.69it/s]Predicting...:  80%|████████  | 400/500 [02:31<00:29,  3.37it/s]Predicting...:  86%|████████▌ | 429/500 [02:38<00:19,  3.55it/s]Predicting...:  89%|████████▉ | 447/500 [02:50<00:19,  2.73it/s]Predicting...:  93%|█████████▎| 465/500 [02:57<00:13,  2.69it/s]Predicting...:  97%|█████████▋| 486/500 [03:07<00:05,  2.47it/s]Predicting...: 100%|██████████| 500/500 [03:12<00:00,  2.56it/s]Predicting...: 100%|██████████| 500/500 [03:12<00:00,  2.60it/s]
+2025-05-05 19:59:54,255 - INFO - joeynmt.prediction - Evaluation result (greedy) loss:   3.08, ppl:  21.73, acc:   0.22, generation: 192.5483[sec], evaluation: 0.0000[sec]
+2025-05-05 19:59:54,258 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2025-05-05 19:59:54,451 - INFO - joeynmt.training - Example #0
+2025-05-05 19:59:54,452 - INFO - joeynmt.training - 	Source:     die Premierminister Indiens und Japans trafen sich in Tokio .
+2025-05-05 19:59:54,452 - INFO - joeynmt.training - 	Reference:  India and Japan prime ministers meet in Tokyo
+2025-05-05 19:59:54,452 - INFO - joeynmt.training - 	Hypothesis: the basks of the Court and the South .
+2025-05-05 19:59:54,452 - INFO - joeynmt.training - Example #1
+2025-05-05 19:59:54,452 - INFO - joeynmt.training - 	Source:     Indiens neuer Premierminister Narendra Modi trifft bei seinem ersten wichtigen Auslandsbesuch seit seinem Wahlsieg im Mai seinen japanischen Amtskollegen Shinzo Abe in Toko , um wirtschaftliche und sicherheitspolitische Beziehungen zu besprechen .
+2025-05-05 19:59:54,452 - INFO - joeynmt.training - 	Reference:  India &apos;s new prime minister , Narendra Modi , is meeting his Japanese counterpart , Shinzo Abe , in Tokyo to discuss economic and security ties , on his first major foreign visit since winning May &apos;s election .
+2025-05-05 19:59:54,452 - INFO - joeynmt.training - 	Hypothesis: in the first of the first time , the first first of the first time , the first time of the first time of the first time of the first time of the Salo , the Sato , the Salo , the most important important and the most important important important and the most important of the Swidddi .
+2025-05-05 19:59:54,452 - INFO - joeynmt.training - Example #2
+2025-05-05 19:59:54,453 - INFO - joeynmt.training - 	Source:     Herr Modi befindet sich auf einer fünftägigen Reise nach Japan , um die wirtschaftlichen Beziehungen mit der drittgrößten Wirtschaftsnation der Welt zu festigen .
+2025-05-05 19:59:54,453 - INFO - joeynmt.training - 	Reference:  Mr Modi is on a five @-@ day trip to Japan to strengthen economic ties with the third largest economy in the world .
+2025-05-05 19:59:54,453 - INFO - joeynmt.training - 	Hypothesis: Mr President , the most important of the most important important , the most important of the most important important to the world .
+2025-05-05 19:59:54,453 - INFO - joeynmt.training - Example #3
+2025-05-05 19:59:54,453 - INFO - joeynmt.training - 	Source:     Pläne für eine stärkere kerntechnische Zusammenarbeit stehen ganz oben auf der Tagesordnung .
+2025-05-05 19:59:54,453 - INFO - joeynmt.training - 	Reference:  high on the agenda are plans for greater nuclear co @-@ operation .
+2025-05-05 19:59:54,453 - INFO - joeynmt.training - 	Hypothesis: a few few example for example , the future of the Committee on the Committee on the Committee on the Committee on .
+2025-05-05 19:59:54,453 - INFO - joeynmt.training - Example #4
+2025-05-05 19:59:54,454 - INFO - joeynmt.training - 	Source:     Berichten zufolge hofft Indien darüber hinaus auf einen Vertrag zur Verteidigungszusammenarbeit zwischen den beiden Nationen .
+2025-05-05 19:59:54,454 - INFO - joeynmt.training - 	Reference:  India is also reportedly hoping for a deal on defence collaboration between the two nations .
+2025-05-05 19:59:54,454 - INFO - joeynmt.training - 	Hypothesis: report on the context of the Committee on the context of the Committee on the EEEEEEEEEast .
+2025-05-05 20:00:48,520 - INFO - joeynmt.training - Epoch   1, Step:     2600, Batch Loss:     2.662497, Batch Acc: 0.282490, Tokens per Sec:     1703, Lr: 0.000300
+2025-05-05 20:01:41,997 - INFO - joeynmt.training - Epoch   1, Step:     2700, Batch Loss:     2.717659, Batch Acc: 0.282640, Tokens per Sec:     1728, Lr: 0.000300
+2025-05-05 20:02:34,905 - INFO - joeynmt.training - Epoch   1, Step:     2800, Batch Loss:     2.730247, Batch Acc: 0.283353, Tokens per Sec:     1738, Lr: 0.000300
+2025-05-05 20:03:29,601 - INFO - joeynmt.training - Epoch   1, Step:     2900, Batch Loss:     2.682282, Batch Acc: 0.289979, Tokens per Sec:     1669, Lr: 0.000300
+2025-05-05 20:04:22,516 - INFO - joeynmt.training - Epoch   1, Step:     3000, Batch Loss:     2.582735, Batch Acc: 0.293154, Tokens per Sec:     1741, Lr: 0.000300
+2025-05-05 20:04:22,517 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   5%|▌         | 26/500 [00:04<01:25,  5.54it/s]Predicting...:   9%|▊         | 43/500 [00:17<03:28,  2.19it/s]Predicting...:  12%|█▏        | 62/500 [00:26<03:23,  2.15it/s]Predicting...:  16%|█▋        | 82/500 [00:36<03:22,  2.06it/s]Predicting...:  21%|██        | 105/500 [00:41<02:25,  2.71it/s]Predicting...:  25%|██▌       | 126/500 [00:45<01:56,  3.21it/s]Predicting...:  30%|██▉       | 149/500 [00:50<01:37,  3.61it/s]Predicting...:  33%|███▎      | 165/500 [01:03<02:17,  2.43it/s]Predicting...:  36%|███▌      | 181/500 [01:06<01:56,  2.75it/s]Predicting...:  40%|████      | 201/500 [01:11<01:34,  3.16it/s]Predicting...:  44%|████▍     | 222/500 [01:20<01:38,  2.82it/s]Predicting...:  50%|████▉     | 248/500 [01:26<01:17,  3.25it/s]Predicting...:  54%|█████▍    | 272/500 [01:31<01:05,  3.50it/s]Predicting...:  59%|█████▉    | 297/500 [01:35<00:47,  4.26it/s]Predicting...:  63%|██████▎   | 317/500 [01:42<00:48,  3.74it/s]Predicting...:  69%|██████▉   | 346/500 [01:49<00:40,  3.79it/s]Predicting...:  73%|███████▎  | 366/500 [01:53<00:32,  4.08it/s]Predicting...:  80%|████████  | 400/500 [01:57<00:19,  5.13it/s]Predicting...:  86%|████████▌ | 429/500 [02:03<00:14,  4.93it/s]Predicting...:  89%|████████▉ | 447/500 [02:15<00:16,  3.28it/s]Predicting...:  93%|█████████▎| 465/500 [02:22<00:11,  3.07it/s]Predicting...:  97%|█████████▋| 486/500 [02:33<00:05,  2.69it/s]Predicting...: 100%|██████████| 500/500 [02:35<00:00,  3.07it/s]Predicting...: 100%|██████████| 500/500 [02:35<00:00,  3.22it/s]
+2025-05-05 20:06:57,807 - INFO - joeynmt.prediction - Evaluation result (greedy) loss:   3.01, ppl:  20.28, acc:   0.23, generation: 155.2775[sec], evaluation: 0.0000[sec]
+2025-05-05 20:06:57,809 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2025-05-05 20:06:58,133 - INFO - joeynmt.helpers - delete models/deen_transformer_prenorm/500.ckpt
+2025-05-05 20:06:58,146 - INFO - joeynmt.training - Example #0
+2025-05-05 20:06:58,147 - INFO - joeynmt.training - 	Source:     die Premierminister Indiens und Japans trafen sich in Tokio .
+2025-05-05 20:06:58,147 - INFO - joeynmt.training - 	Reference:  India and Japan prime ministers meet in Tokyo
+2025-05-05 20:06:58,147 - INFO - joeynmt.training - 	Hypothesis: the South America and the Cao and the South .
+2025-05-05 20:06:58,147 - INFO - joeynmt.training - Example #1
+2025-05-05 20:06:58,147 - INFO - joeynmt.training - 	Source:     Indiens neuer Premierminister Narendra Modi trifft bei seinem ersten wichtigen Auslandsbesuch seit seinem Wahlsieg im Mai seinen japanischen Amtskollegen Shinzo Abe in Toko , um wirtschaftliche und sicherheitspolitische Beziehungen zu besprechen .
+2025-05-05 20:06:58,147 - INFO - joeynmt.training - 	Reference:  India &apos;s new prime minister , Narendra Modi , is meeting his Japanese counterpart , Shinzo Abe , in Tokyo to discuss economic and security ties , on his first major foreign visit since winning May &apos;s election .
+2025-05-05 20:06:58,147 - INFO - joeynmt.training - 	Hypothesis: in the first of the first time , the first time , the first first of the first first first of the first first time in the first time of the first time in the first time of the first time of the Cato , and the easy of the European Union , and the European Union , and the European Union .
+2025-05-05 20:06:58,147 - INFO - joeynmt.training - Example #2
+2025-05-05 20:06:58,148 - INFO - joeynmt.training - 	Source:     Herr Modi befindet sich auf einer fünftägigen Reise nach Japan , um die wirtschaftlichen Beziehungen mit der drittgrößten Wirtschaftsnation der Welt zu festigen .
+2025-05-05 20:06:58,148 - INFO - joeynmt.training - 	Reference:  Mr Modi is on a five @-@ day trip to Japan to strengthen economic ties with the third largest economy in the world .
+2025-05-05 20:06:58,148 - INFO - joeynmt.training - 	Hypothesis: Mr President , the most important to a very very good design of the Court of the world , the world &apos;s economic economic and economic growth .
+2025-05-05 20:06:58,148 - INFO - joeynmt.training - Example #3
+2025-05-05 20:06:58,148 - INFO - joeynmt.training - 	Source:     Pläne für eine stärkere kerntechnische Zusammenarbeit stehen ganz oben auf der Tagesordnung .
+2025-05-05 20:06:58,148 - INFO - joeynmt.training - 	Reference:  high on the agenda are plans for greater nuclear co @-@ operation .
+2025-05-05 20:06:58,148 - INFO - joeynmt.training - 	Hypothesis: the proper cent for a very important important important important for the future .
+2025-05-05 20:06:58,148 - INFO - joeynmt.training - Example #4
+2025-05-05 20:06:58,148 - INFO - joeynmt.training - 	Source:     Berichten zufolge hofft Indien darüber hinaus auf einen Vertrag zur Verteidigungszusammenarbeit zwischen den beiden Nationen .
+2025-05-05 20:06:58,148 - INFO - joeynmt.training - 	Reference:  India is also reportedly hoping for a deal on defence collaboration between the two nations .
+2025-05-05 20:06:58,149 - INFO - joeynmt.training - 	Hypothesis: the report is also a very important to the first time to the first first of the two two years .
+2025-05-05 20:07:56,427 - INFO - joeynmt.training - Epoch   1, Step:     3100, Batch Loss:     2.641423, Batch Acc: 0.298849, Tokens per Sec:     1585, Lr: 0.000300
+2025-05-05 20:08:49,956 - INFO - joeynmt.training - Epoch   1, Step:     3200, Batch Loss:     2.524444, Batch Acc: 0.302520, Tokens per Sec:     1701, Lr: 0.000300
+2025-05-05 20:09:43,122 - INFO - joeynmt.training - Epoch   1, Step:     3300, Batch Loss:     2.623632, Batch Acc: 0.304959, Tokens per Sec:     1716, Lr: 0.000300
+2025-05-05 20:10:36,462 - INFO - joeynmt.training - Epoch   1, Step:     3400, Batch Loss:     2.472672, Batch Acc: 0.310690, Tokens per Sec:     1742, Lr: 0.000300
+2025-05-05 20:11:34,492 - INFO - joeynmt.training - Epoch   1, Step:     3500, Batch Loss:     2.454235, Batch Acc: 0.306871, Tokens per Sec:     1581, Lr: 0.000300
+2025-05-05 20:11:34,494 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   5%|▌         | 26/500 [00:05<01:44,  4.52it/s]Predicting...:   9%|▊         | 43/500 [00:18<03:42,  2.05it/s]Predicting...:  12%|█▏        | 62/500 [00:25<03:08,  2.33it/s]Predicting...:  16%|█▋        | 82/500 [00:36<03:17,  2.12it/s]Predicting...:  21%|██        | 105/500 [00:39<02:14,  2.93it/s]Predicting...:  25%|██▌       | 126/500 [00:44<01:53,  3.29it/s]Predicting...:  30%|██▉       | 149/500 [00:53<01:57,  2.98it/s]Predicting...:  33%|███▎      | 165/500 [01:06<02:34,  2.18it/s]Predicting...:  36%|███▌      | 181/500 [01:09<02:02,  2.61it/s]Predicting...:  40%|████      | 201/500 [01:15<01:48,  2.75it/s]Predicting...:  44%|████▍     | 222/500 [01:23<01:42,  2.71it/s]Predicting...:  50%|████▉     | 248/500 [01:29<01:17,  3.26it/s]Predicting...:  54%|█████▍    | 272/500 [01:34<01:02,  3.65it/s]Predicting...:  59%|█████▉    | 297/500 [01:37<00:46,  4.34it/s]Predicting...:  63%|██████▎   | 317/500 [01:43<00:45,  4.04it/s]Predicting...:  69%|██████▉   | 346/500 [01:47<00:33,  4.65it/s]Predicting...:  73%|███████▎  | 366/500 [01:57<00:37,  3.53it/s]Predicting...:  80%|████████  | 400/500 [02:02<00:23,  4.31it/s]Predicting...:  86%|████████▌ | 429/500 [02:07<00:14,  4.85it/s]Predicting...:  89%|████████▉ | 447/500 [02:17<00:15,  3.49it/s]Predicting...:  93%|█████████▎| 465/500 [02:23<00:10,  3.35it/s]Predicting...:  97%|█████████▋| 486/500 [02:32<00:04,  3.01it/s]Predicting...: 100%|██████████| 500/500 [02:34<00:00,  3.39it/s]Predicting...: 100%|██████████| 500/500 [02:34<00:00,  3.24it/s]
+2025-05-05 20:14:08,771 - INFO - joeynmt.prediction - Evaluation result (greedy) loss:   2.95, ppl:  19.06, acc:   0.24, generation: 154.2643[sec], evaluation: 0.0000[sec]
+2025-05-05 20:14:08,775 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2025-05-05 20:14:08,976 - INFO - joeynmt.helpers - delete models/deen_transformer_prenorm/1000.ckpt
+2025-05-05 20:14:08,989 - INFO - joeynmt.training - Example #0
+2025-05-05 20:14:08,990 - INFO - joeynmt.training - 	Source:     die Premierminister Indiens und Japans trafen sich in Tokio .
+2025-05-05 20:14:08,990 - INFO - joeynmt.training - 	Reference:  India and Japan prime ministers meet in Tokyo
+2025-05-05 20:14:08,990 - INFO - joeynmt.training - 	Hypothesis: the restaurant , the Japan and Japan .
+2025-05-05 20:14:08,990 - INFO - joeynmt.training - Example #1
+2025-05-05 20:14:08,991 - INFO - joeynmt.training - 	Source:     Indiens neuer Premierminister Narendra Modi trifft bei seinem ersten wichtigen Auslandsbesuch seit seinem Wahlsieg im Mai seinen japanischen Amtskollegen Shinzo Abe in Toko , um wirtschaftliche und sicherheitspolitische Beziehungen zu besprechen .
+2025-05-05 20:14:08,991 - INFO - joeynmt.training - 	Reference:  India &apos;s new prime minister , Narendra Modi , is meeting his Japanese counterpart , Shinzo Abe , in Tokyo to discuss economic and security ties , on his first major foreign visit since winning May &apos;s election .
+2025-05-05 20:14:08,991 - INFO - joeynmt.training - 	Hypothesis: in the new property of the new property of the first time in a very important important important important important important important important for a very important role in the first time of the Cano America and the realised in the Cano .
+2025-05-05 20:14:08,991 - INFO - joeynmt.training - Example #2
+2025-05-05 20:14:08,991 - INFO - joeynmt.training - 	Source:     Herr Modi befindet sich auf einer fünftägigen Reise nach Japan , um die wirtschaftlichen Beziehungen mit der drittgrößten Wirtschaftsnation der Welt zu festigen .
+2025-05-05 20:14:08,991 - INFO - joeynmt.training - 	Reference:  Mr Modi is on a five @-@ day trip to Japan to strengthen economic ties with the third largest economy in the world .
+2025-05-05 20:14:08,991 - INFO - joeynmt.training - 	Hypothesis: Mr President , Mr Meri is a very good of the City of the City of the economy , the economic and the world .
+2025-05-05 20:14:08,991 - INFO - joeynmt.training - Example #3
+2025-05-05 20:14:08,992 - INFO - joeynmt.training - 	Source:     Pläne für eine stärkere kerntechnische Zusammenarbeit stehen ganz oben auf der Tagesordnung .
+2025-05-05 20:14:08,992 - INFO - joeynmt.training - 	Reference:  high on the agenda are plans for greater nuclear co @-@ operation .
+2025-05-05 20:14:08,992 - INFO - joeynmt.training - 	Hypothesis: the Court of the technical cooperation cooperation between the Commission and the Council .
+2025-05-05 20:14:08,992 - INFO - joeynmt.training - Example #4
+2025-05-05 20:14:08,992 - INFO - joeynmt.training - 	Source:     Berichten zufolge hofft Indien darüber hinaus auf einen Vertrag zur Verteidigungszusammenarbeit zwischen den beiden Nationen .
+2025-05-05 20:14:08,993 - INFO - joeynmt.training - 	Reference:  India is also reportedly hoping for a deal on defence collaboration between the two nations .
+2025-05-05 20:14:08,993 - INFO - joeynmt.training - 	Hypothesis: the report is the report on the proposals of the proposals of the two two two two two two two two two two two two two two two two two two two two .
+2025-05-05 20:15:03,340 - INFO - joeynmt.training - Epoch   1, Step:     3600, Batch Loss:     2.867792, Batch Acc: 0.312652, Tokens per Sec:     1691, Lr: 0.000300
+2025-05-05 20:15:57,572 - INFO - joeynmt.training - Epoch   1, Step:     3700, Batch Loss:     2.441676, Batch Acc: 0.309430, Tokens per Sec:     1702, Lr: 0.000300
+2025-05-05 20:16:52,253 - INFO - joeynmt.training - Epoch   1, Step:     3800, Batch Loss:     2.586004, Batch Acc: 0.318249, Tokens per Sec:     1689, Lr: 0.000300
+2025-05-05 20:17:56,771 - INFO - joeynmt.training - Epoch   1, Step:     3900, Batch Loss:     2.456853, Batch Acc: 0.318538, Tokens per Sec:     1441, Lr: 0.000300
+2025-05-05 20:18:54,358 - INFO - joeynmt.training - Epoch   1, Step:     4000, Batch Loss:     2.435097, Batch Acc: 0.325125, Tokens per Sec:     1600, Lr: 0.000300
+2025-05-05 20:18:54,359 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   5%|▌         | 26/500 [00:05<01:32,  5.11it/s]Predicting...:   9%|▊         | 43/500 [00:18<03:42,  2.06it/s]Predicting...:  12%|█▏        | 62/500 [00:22<02:41,  2.72it/s]Predicting...:  16%|█▋        | 82/500 [00:33<03:06,  2.24it/s]Predicting...:  21%|██        | 105/500 [00:40<02:30,  2.62it/s]Predicting...:  25%|██▌       | 126/500 [00:44<01:57,  3.19it/s]Predicting...:  30%|██▉       | 149/500 [00:48<01:32,  3.79it/s]Predicting...:  33%|███▎      | 165/500 [01:01<02:16,  2.46it/s]Predicting...:  36%|███▌      | 181/500 [01:04<01:52,  2.82it/s]Predicting...:  40%|████      | 201/500 [01:11<01:42,  2.90it/s]Predicting...:  44%|████▍     | 222/500 [01:14<01:16,  3.62it/s]Predicting...:  50%|████▉     | 248/500 [01:17<00:56,  4.49it/s]Predicting...:  54%|█████▍    | 272/500 [01:20<00:44,  5.07it/s]Predicting...:  59%|█████▉    | 297/500 [01:23<00:34,  5.88it/s]Predicting...:  63%|██████▎   | 317/500 [01:26<00:29,  6.11it/s]Predicting...:  69%|██████▉   | 346/500 [01:31<00:24,  6.27it/s]Predicting...:  73%|███████▎  | 366/500 [01:34<00:21,  6.36it/s]Predicting...:  80%|████████  | 400/500 [01:38<00:14,  6.90it/s]Predicting...:  86%|████████▌ | 429/500 [01:46<00:12,  5.46it/s]Predicting...:  89%|████████▉ | 447/500 [01:51<00:10,  4.92it/s]Predicting...:  93%|█████████▎| 465/500 [01:58<00:08,  3.91it/s]Predicting...:  97%|█████████▋| 486/500 [02:09<00:04,  3.07it/s]Predicting...: 100%|██████████| 500/500 [02:12<00:00,  3.29it/s]Predicting...: 100%|██████████| 500/500 [02:12<00:00,  3.78it/s]
+2025-05-05 20:21:06,620 - INFO - joeynmt.prediction - Evaluation result (greedy) loss:   2.89, ppl:  17.95, acc:   0.26, generation: 132.2465[sec], evaluation: 0.0000[sec]
+2025-05-05 20:21:06,626 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2025-05-05 20:21:06,832 - INFO - joeynmt.helpers - delete models/deen_transformer_prenorm/1500.ckpt
+2025-05-05 20:21:06,848 - INFO - joeynmt.training - Example #0
+2025-05-05 20:21:06,849 - INFO - joeynmt.training - 	Source:     die Premierminister Indiens und Japans trafen sich in Tokio .
+2025-05-05 20:21:06,849 - INFO - joeynmt.training - 	Reference:  India and Japan prime ministers meet in Tokyo
+2025-05-05 20:21:06,849 - INFO - joeynmt.training - 	Hypothesis: the references of the Japan and Japan .
+2025-05-05 20:21:06,849 - INFO - joeynmt.training - Example #1
+2025-05-05 20:21:06,850 - INFO - joeynmt.training - 	Source:     Indiens neuer Premierminister Narendra Modi trifft bei seinem ersten wichtigen Auslandsbesuch seit seinem Wahlsieg im Mai seinen japanischen Amtskollegen Shinzo Abe in Toko , um wirtschaftliche und sicherheitspolitische Beziehungen zu besprechen .
+2025-05-05 20:21:06,850 - INFO - joeynmt.training - 	Reference:  India &apos;s new prime minister , Narendra Modi , is meeting his Japanese counterpart , Shinzo Abe , in Tokyo to discuss economic and security ties , on his first major foreign visit since winning May &apos;s election .
+2025-05-05 20:21:06,850 - INFO - joeynmt.training - 	Hypothesis: in the new , the first of the first time , the first first of the first first of the first first of the first first of the first first of the South America , and the South Aradio , and social social and economic economic and social social and social social and social social and social social and and social social social and social social and social and social and social and economic growth .
+2025-05-05 20:21:06,850 - INFO - joeynmt.training - Example #2
+2025-05-05 20:21:06,851 - INFO - joeynmt.training - 	Source:     Herr Modi befindet sich auf einer fünftägigen Reise nach Japan , um die wirtschaftlichen Beziehungen mit der drittgrößten Wirtschaftsnation der Welt zu festigen .
+2025-05-05 20:21:06,851 - INFO - joeynmt.training - 	Reference:  Mr Modi is on a five @-@ day trip to Japan to strengthen economic ties with the third largest economy in the world .
+2025-05-05 20:21:06,851 - INFO - joeynmt.training - 	Hypothesis: Mr President , the most important is to be reflect , Japan , the economic realist of the economic realist of the world &apos;s economic growth .
+2025-05-05 20:21:06,851 - INFO - joeynmt.training - Example #3
+2025-05-05 20:21:06,851 - INFO - joeynmt.training - 	Source:     Pläne für eine stärkere kerntechnische Zusammenarbeit stehen ganz oben auf der Tagesordnung .
+2025-05-05 20:21:06,851 - INFO - joeynmt.training - 	Reference:  high on the agenda are plans for greater nuclear co @-@ operation .
+2025-05-05 20:21:06,851 - INFO - joeynmt.training - 	Hypothesis: the CCourt for a partner cooperation in the Committee on the Commission .
+2025-05-05 20:21:06,851 - INFO - joeynmt.training - Example #4
+2025-05-05 20:21:06,852 - INFO - joeynmt.training - 	Source:     Berichten zufolge hofft Indien darüber hinaus auf einen Vertrag zur Verteidigungszusammenarbeit zwischen den beiden Nationen .
+2025-05-05 20:21:06,852 - INFO - joeynmt.training - 	Reference:  India is also reportedly hoping for a deal on defence collaboration between the two nations .
+2025-05-05 20:21:06,852 - INFO - joeynmt.training - 	Hypothesis: on the report , in order to reform a reform of the two reports .
+2025-05-05 20:21:45,659 - INFO - joeynmt.training - Epoch   1: total training loss 12051.71
+2025-05-05 20:21:45,660 - INFO - joeynmt.training - EPOCH 2
+2025-05-05 20:22:05,444 - INFO - joeynmt.training - Epoch   2, Step:     4100, Batch Loss:     2.499225, Batch Acc: 0.329988, Tokens per Sec:     1677, Lr: 0.000300
+2025-05-05 20:22:58,929 - INFO - joeynmt.training - Epoch   2, Step:     4200, Batch Loss:     2.553950, Batch Acc: 0.332067, Tokens per Sec:     1727, Lr: 0.000300
+2025-05-05 20:23:52,826 - INFO - joeynmt.training - Epoch   2, Step:     4300, Batch Loss:     2.403388, Batch Acc: 0.336668, Tokens per Sec:     1684, Lr: 0.000300
+2025-05-05 20:24:46,834 - INFO - joeynmt.training - Epoch   2, Step:     4400, Batch Loss:     2.645617, Batch Acc: 0.335700, Tokens per Sec:     1708, Lr: 0.000300
+2025-05-05 20:25:42,554 - INFO - joeynmt.training - Epoch   2, Step:     4500, Batch Loss:     2.589716, Batch Acc: 0.338148, Tokens per Sec:     1661, Lr: 0.000300
+2025-05-05 20:25:42,556 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   5%|▌         | 26/500 [00:03<01:09,  6.78it/s]Predicting...:   9%|▊         | 43/500 [00:08<01:29,  5.13it/s]Predicting...:  12%|█▏        | 62/500 [00:12<01:31,  4.78it/s]Predicting...:  16%|█▋        | 82/500 [00:21<02:10,  3.21it/s]Predicting...:  21%|██        | 105/500 [00:26<01:44,  3.79it/s]Predicting...:  25%|██▌       | 126/500 [00:29<01:25,  4.38it/s]Predicting...:  30%|██▉       | 149/500 [00:33<01:12,  4.85it/s]Predicting...:  33%|███▎      | 165/500 [00:36<01:10,  4.77it/s]Predicting...:  36%|███▌      | 181/500 [00:39<01:03,  5.04it/s]Predicting...:  40%|████      | 201/500 [00:46<01:13,  4.06it/s]Predicting...:  44%|████▍     | 222/500 [00:50<01:05,  4.28it/s]Predicting...:  50%|████▉     | 248/500 [00:53<00:48,  5.20it/s]Predicting...:  54%|█████▍    | 272/500 [00:56<00:36,  6.19it/s]Predicting...:  59%|█████▉    | 297/500 [01:00<00:34,  5.85it/s]Predicting...:  63%|██████▎   | 317/500 [01:03<00:28,  6.38it/s]Predicting...:  69%|██████▉   | 346/500 [01:07<00:23,  6.54it/s]Predicting...:  73%|███████▎  | 366/500 [01:10<00:20,  6.48it/s]Predicting...:  80%|████████  | 400/500 [01:13<00:12,  8.29it/s]Predicting...:  86%|████████▌ | 429/500 [01:15<00:07,  9.04it/s]Predicting...:  89%|████████▉ | 447/500 [01:19<00:06,  7.77it/s]Predicting...:  93%|█████████▎| 465/500 [01:21<00:04,  7.67it/s]Predicting...:  97%|█████████▋| 486/500 [01:24<00:01,  7.85it/s]Predicting...: 100%|██████████| 500/500 [01:26<00:00,  7.49it/s]Predicting...: 100%|██████████| 500/500 [01:26<00:00,  5.80it/s]
+2025-05-05 20:27:08,811 - INFO - joeynmt.prediction - Evaluation result (greedy) loss:   2.83, ppl:  17.01, acc:   0.28, generation: 86.2408[sec], evaluation: 0.0000[sec]
+2025-05-05 20:27:08,815 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2025-05-05 20:27:08,987 - INFO - joeynmt.helpers - delete models/deen_transformer_prenorm/2000.ckpt
+2025-05-05 20:27:08,998 - INFO - joeynmt.training - Example #0
+2025-05-05 20:27:08,998 - INFO - joeynmt.training - 	Source:     die Premierminister Indiens und Japans trafen sich in Tokio .
+2025-05-05 20:27:08,999 - INFO - joeynmt.training - 	Reference:  India and Japan prime ministers meet in Tokyo
+2025-05-05 20:27:08,999 - INFO - joeynmt.training - 	Hypothesis: the represents in China and Japan .
+2025-05-05 20:27:08,999 - INFO - joeynmt.training - Example #1
+2025-05-05 20:27:08,999 - INFO - joeynmt.training - 	Source:     Indiens neuer Premierminister Narendra Modi trifft bei seinem ersten wichtigen Auslandsbesuch seit seinem Wahlsieg im Mai seinen japanischen Amtskollegen Shinzo Abe in Toko , um wirtschaftliche und sicherheitspolitische Beziehungen zu besprechen .
+2025-05-05 20:27:08,999 - INFO - joeynmt.training - 	Reference:  India &apos;s new prime minister , Narendra Modi , is meeting his Japanese counterpart , Shinzo Abe , in Tokyo to discuss economic and security ties , on his first major foreign visit since winning May &apos;s election .
+2025-05-05 20:27:08,999 - INFO - joeynmt.training - 	Hypothesis: Japan America Noodi &apos;s first first of the first first of the first part of the first time in the first of the Sani &apos;s first first first of the Sani Araciro America &apos;s political political and economic economic economic and economic growth .
+2025-05-05 20:27:08,999 - INFO - joeynmt.training - Example #2
+2025-05-05 20:27:09,000 - INFO - joeynmt.training - 	Source:     Herr Modi befindet sich auf einer fünftägigen Reise nach Japan , um die wirtschaftlichen Beziehungen mit der drittgrößten Wirtschaftsnation der Welt zu festigen .
+2025-05-05 20:27:09,000 - INFO - joeynmt.training - 	Reference:  Mr Modi is on a five @-@ day trip to Japan to strengthen economic ties with the third largest economy in the world .
+2025-05-05 20:27:09,000 - INFO - joeynmt.training - 	Hypothesis: Mr President , the remaining of the world &apos;s most of Japan &apos;s economy , which is the economic relaws to the world &apos;s economic relaws .
+2025-05-05 20:27:09,000 - INFO - joeynmt.training - Example #3
+2025-05-05 20:27:09,000 - INFO - joeynmt.training - 	Source:     Pläne für eine stärkere kerntechnische Zusammenarbeit stehen ganz oben auf der Tagesordnung .
+2025-05-05 20:27:09,001 - INFO - joeynmt.training - 	Reference:  high on the agenda are plans for greater nuclear co @-@ operation .
+2025-05-05 20:27:09,001 - INFO - joeynmt.training - 	Hypothesis: PPaper for a technical cooperation cooperation on the basis of cooperation cooperation on the basis of the Commission .
+2025-05-05 20:27:09,001 - INFO - joeynmt.training - Example #4
+2025-05-05 20:27:09,001 - INFO - joeynmt.training - 	Source:     Berichten zufolge hofft Indien darüber hinaus auf einen Vertrag zur Verteidigungszusammenarbeit zwischen den beiden Nationen .
+2025-05-05 20:27:09,001 - INFO - joeynmt.training - 	Reference:  India is also reportedly hoping for a deal on defence collaboration between the two nations .
+2025-05-05 20:27:09,001 - INFO - joeynmt.training - 	Hypothesis: report also also also the fact that the Treaty of the Treaty of the two parts .
+2025-05-05 20:28:03,035 - INFO - joeynmt.training - Epoch   2, Step:     4600, Batch Loss:     2.316151, Batch Acc: 0.345929, Tokens per Sec:     1719, Lr: 0.000300
+2025-05-05 20:28:56,118 - INFO - joeynmt.training - Epoch   2, Step:     4700, Batch Loss:     2.398693, Batch Acc: 0.346728, Tokens per Sec:     1725, Lr: 0.000300
+2025-05-05 20:29:49,960 - INFO - joeynmt.training - Epoch   2, Step:     4800, Batch Loss:     2.416184, Batch Acc: 0.349635, Tokens per Sec:     1735, Lr: 0.000300
+2025-05-05 20:30:43,200 - INFO - joeynmt.training - Epoch   2, Step:     4900, Batch Loss:     2.364120, Batch Acc: 0.354337, Tokens per Sec:     1722, Lr: 0.000300
+2025-05-05 20:31:38,094 - INFO - joeynmt.training - Epoch   2, Step:     5000, Batch Loss:     2.309052, Batch Acc: 0.357791, Tokens per Sec:     1664, Lr: 0.000300
+2025-05-05 20:31:38,095 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   5%|▌         | 26/500 [00:03<01:00,  7.88it/s]Predicting...:   9%|▊         | 43/500 [00:06<01:16,  5.94it/s]Predicting...:  12%|█▏        | 62/500 [00:10<01:21,  5.40it/s]Predicting...:  16%|█▋        | 82/500 [00:14<01:19,  5.28it/s]Predicting...:  21%|██        | 105/500 [00:17<01:06,  5.96it/s]Predicting...:  25%|██▌       | 126/500 [00:20<00:59,  6.28it/s]Predicting...:  30%|██▉       | 149/500 [00:25<00:59,  5.89it/s]Predicting...:  33%|███▎      | 165/500 [00:28<00:59,  5.67it/s]Predicting...:  36%|███▌      | 181/500 [00:31<00:57,  5.54it/s]Predicting...:  40%|████      | 201/500 [00:38<01:08,  4.37it/s]Predicting...:  44%|████▍     | 222/500 [00:41<00:58,  4.72it/s]Predicting...:  50%|████▉     | 248/500 [00:45<00:46,  5.44it/s]Predicting...:  54%|█████▍    | 272/500 [00:47<00:35,  6.40it/s]Predicting...:  59%|█████▉    | 297/500 [00:55<00:41,  4.91it/s]Predicting...:  63%|██████▎   | 317/500 [01:01<00:42,  4.34it/s]Predicting...:  69%|██████▉   | 346/500 [01:08<00:37,  4.11it/s]Predicting...:  73%|███████▎  | 366/500 [01:20<00:43,  3.05it/s]Predicting...:  80%|████████  | 400/500 [01:22<00:22,  4.36it/s]Predicting...:  86%|████████▌ | 429/500 [01:25<00:13,  5.34it/s]Predicting...:  89%|████████▉ | 447/500 [01:29<00:10,  5.18it/s]Predicting...:  93%|█████████▎| 465/500 [01:36<00:08,  4.12it/s]Predicting...:  97%|█████████▋| 486/500 [01:40<00:03,  4.46it/s]Predicting...: 100%|██████████| 500/500 [01:43<00:00,  4.62it/s]Predicting...: 100%|██████████| 500/500 [01:43<00:00,  4.85it/s]
+2025-05-05 20:33:21,113 - INFO - joeynmt.prediction - Evaluation result (greedy) loss:   2.76, ppl:  15.78, acc:   0.29, generation: 103.0068[sec], evaluation: 0.0000[sec]
+2025-05-05 20:33:21,115 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2025-05-05 20:33:21,273 - INFO - joeynmt.helpers - delete models/deen_transformer_prenorm/2500.ckpt
+2025-05-05 20:33:21,289 - INFO - joeynmt.training - Example #0
+2025-05-05 20:33:21,290 - INFO - joeynmt.training - 	Source:     die Premierminister Indiens und Japans trafen sich in Tokio .
+2025-05-05 20:33:21,290 - INFO - joeynmt.training - 	Reference:  India and Japan prime ministers meet in Tokyo
+2025-05-05 20:33:21,290 - INFO - joeynmt.training - 	Hypothesis: the represents a number of and Japan .
+2025-05-05 20:33:21,290 - INFO - joeynmt.training - Example #1
+2025-05-05 20:33:21,290 - INFO - joeynmt.training - 	Source:     Indiens neuer Premierminister Narendra Modi trifft bei seinem ersten wichtigen Auslandsbesuch seit seinem Wahlsieg im Mai seinen japanischen Amtskollegen Shinzo Abe in Toko , um wirtschaftliche und sicherheitspolitische Beziehungen zu besprechen .
+2025-05-05 20:33:21,290 - INFO - joeynmt.training - 	Reference:  India &apos;s new prime minister , Narendra Modi , is meeting his Japanese counterpart , Shinzo Abe , in Tokyo to discuss economic and security ties , on his first major foreign visit since winning May &apos;s election .
+2025-05-05 20:33:21,290 - INFO - joeynmt.training - 	Hypothesis: the Indian , the Dari No Security , the South &apos;s first of the South East , and a very important step in the South Association of his his first and the economy , and the political and economic and economic growth .
+2025-05-05 20:33:21,290 - INFO - joeynmt.training - Example #2
+2025-05-05 20:33:21,291 - INFO - joeynmt.training - 	Source:     Herr Modi befindet sich auf einer fünftägigen Reise nach Japan , um die wirtschaftlichen Beziehungen mit der drittgrößten Wirtschaftsnation der Welt zu festigen .
+2025-05-05 20:33:21,291 - INFO - joeynmt.training - 	Reference:  Mr Modi is on a five @-@ day trip to Japan to strengthen economic ties with the third largest economy in the world .
+2025-05-05 20:33:21,291 - INFO - joeynmt.training - 	Hypothesis: Mr Modi is located on a file of the Japan , the economy , the economy with the economic relations with the world &apos;s economic relations .
+2025-05-05 20:33:21,291 - INFO - joeynmt.training - Example #3
+2025-05-05 20:33:21,291 - INFO - joeynmt.training - 	Source:     Pläne für eine stärkere kerntechnische Zusammenarbeit stehen ganz oben auf der Tagesordnung .
+2025-05-05 20:33:21,291 - INFO - joeynmt.training - 	Reference:  high on the agenda are plans for greater nuclear co @-@ operation .
+2025-05-05 20:33:21,291 - INFO - joeynmt.training - 	Hypothesis: PPublic cooperation is a more technical cooperation .
+2025-05-05 20:33:21,291 - INFO - joeynmt.training - Example #4
+2025-05-05 20:33:21,292 - INFO - joeynmt.training - 	Source:     Berichten zufolge hofft Indien darüber hinaus auf einen Vertrag zur Verteidigungszusammenarbeit zwischen den beiden Nationen .
+2025-05-05 20:33:21,292 - INFO - joeynmt.training - 	Reference:  India is also reportedly hoping for a deal on defence collaboration between the two nations .
+2025-05-05 20:33:21,292 - INFO - joeynmt.training - 	Hypothesis: report on the subject of the India &apos;s committee on a Treaty between the two Nations .
+2025-05-05 20:34:15,776 - INFO - joeynmt.training - Epoch   2, Step:     5100, Batch Loss:     2.444349, Batch Acc: 0.356600, Tokens per Sec:     1678, Lr: 0.000300
+2025-05-05 20:35:09,525 - INFO - joeynmt.training - Epoch   2, Step:     5200, Batch Loss:     2.322711, Batch Acc: 0.366360, Tokens per Sec:     1766, Lr: 0.000300
+2025-05-05 20:36:03,529 - INFO - joeynmt.training - Epoch   2, Step:     5300, Batch Loss:     2.259211, Batch Acc: 0.366863, Tokens per Sec:     1696, Lr: 0.000300
+2025-05-05 20:36:58,649 - INFO - joeynmt.training - Epoch   2, Step:     5400, Batch Loss:     2.310202, Batch Acc: 0.374133, Tokens per Sec:     1685, Lr: 0.000300
+2025-05-05 20:37:59,839 - INFO - joeynmt.training - Epoch   2, Step:     5500, Batch Loss:     2.290782, Batch Acc: 0.375191, Tokens per Sec:     1518, Lr: 0.000300
+2025-05-05 20:37:59,841 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   5%|▌         | 26/500 [00:04<01:19,  5.95it/s]Predicting...:   9%|▊         | 43/500 [00:09<01:39,  4.57it/s]Predicting...:  12%|█▏        | 62/500 [00:13<01:42,  4.28it/s]Predicting...:  16%|█▋        | 82/500 [00:19<01:44,  4.01it/s]Predicting...:  21%|██        | 105/500 [00:22<01:24,  4.67it/s]Predicting...:  25%|██▌       | 126/500 [00:27<01:22,  4.54it/s]Predicting...:  30%|██▉       | 149/500 [00:32<01:13,  4.80it/s]Predicting...:  33%|███▎      | 165/500 [00:35<01:09,  4.80it/s]Predicting...:  36%|███▌      | 181/500 [00:38<01:05,  4.89it/s]Predicting...:  40%|████      | 201/500 [00:41<00:57,  5.23it/s]Predicting...:  44%|████▍     | 222/500 [00:50<01:14,  3.74it/s]Predicting...:  50%|████▉     | 248/500 [00:53<00:51,  4.94it/s]Predicting...:  54%|█████▍    | 272/500 [00:56<00:40,  5.65it/s]Predicting...:  59%|█████▉    | 297/500 [00:59<00:32,  6.25it/s]Predicting...:  63%|██████▎   | 317/500 [01:02<00:29,  6.19it/s]Predicting...:  69%|██████▉   | 346/500 [01:09<00:28,  5.35it/s]Predicting...:  73%|███████▎  | 366/500 [01:12<00:23,  5.71it/s]Predicting...:  80%|████████  | 400/500 [01:13<00:12,  7.77it/s]Predicting...:  86%|████████▌ | 429/500 [01:16<00:07,  9.07it/s]Predicting...:  89%|████████▉ | 447/500 [01:19<00:06,  7.93it/s]Predicting...:  93%|█████████▎| 465/500 [01:25<00:06,  5.48it/s]Predicting...:  97%|█████████▋| 486/500 [01:28<00:02,  5.98it/s]Predicting...: 100%|██████████| 500/500 [01:29<00:00,  6.51it/s]Predicting...: 100%|██████████| 500/500 [01:29<00:00,  5.56it/s]
+2025-05-05 20:39:29,803 - INFO - joeynmt.prediction - Evaluation result (greedy) loss:   2.67, ppl:  14.47, acc:   0.32, generation: 89.9497[sec], evaluation: 0.0000[sec]
+2025-05-05 20:39:29,808 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2025-05-05 20:39:30,003 - INFO - joeynmt.helpers - delete models/deen_transformer_prenorm/3000.ckpt
+2025-05-05 20:39:30,016 - INFO - joeynmt.training - Example #0
+2025-05-05 20:39:30,016 - INFO - joeynmt.training - 	Source:     die Premierminister Indiens und Japans trafen sich in Tokio .
+2025-05-05 20:39:30,016 - INFO - joeynmt.training - 	Reference:  India and Japan prime ministers meet in Tokyo
+2025-05-05 20:39:30,016 - INFO - joeynmt.training - 	Hypothesis: the represents a career and Japan .
+2025-05-05 20:39:30,016 - INFO - joeynmt.training - Example #1
+2025-05-05 20:39:30,017 - INFO - joeynmt.training - 	Source:     Indiens neuer Premierminister Narendra Modi trifft bei seinem ersten wichtigen Auslandsbesuch seit seinem Wahlsieg im Mai seinen japanischen Amtskollegen Shinzo Abe in Toko , um wirtschaftliche und sicherheitspolitische Beziehungen zu besprechen .
+2025-05-05 20:39:30,017 - INFO - joeynmt.training - 	Reference:  India &apos;s new prime minister , Narendra Modi , is meeting his Japanese counterpart , Shinzo Abe , in Tokyo to discuss economic and security ties , on his first major foreign visit since winning May &apos;s election .
+2025-05-05 20:39:30,017 - INFO - joeynmt.training - 	Hypothesis: India , the new authorities Nari &apos;s first represents a first first of the first reading , the first reading , the first reading of the South Azzech &apos;s South Azzech Appo , and the relations .
+2025-05-05 20:39:30,017 - INFO - joeynmt.training - Example #2
+2025-05-05 20:39:30,018 - INFO - joeynmt.training - 	Source:     Herr Modi befindet sich auf einer fünftägigen Reise nach Japan , um die wirtschaftlichen Beziehungen mit der drittgrößten Wirtschaftsnation der Welt zu festigen .
+2025-05-05 20:39:30,018 - INFO - joeynmt.training - 	Reference:  Mr Modi is on a five @-@ day trip to Japan to strengthen economic ties with the third largest economy in the world .
+2025-05-05 20:39:30,018 - INFO - joeynmt.training - 	Hypothesis: Mr Modi is is on a file of the world &apos;s Japan , which is the economic relations with the world &apos;s most important economic reports .
+2025-05-05 20:39:30,018 - INFO - joeynmt.training - Example #3
+2025-05-05 20:39:30,018 - INFO - joeynmt.training - 	Source:     Pläne für eine stärkere kerntechnische Zusammenarbeit stehen ganz oben auf der Tagesordnung .
+2025-05-05 20:39:30,018 - INFO - joeynmt.training - 	Reference:  high on the agenda are plans for greater nuclear co @-@ operation .
+2025-05-05 20:39:30,018 - INFO - joeynmt.training - 	Hypothesis: the fight for a more technical cooperation , which is the represents .
+2025-05-05 20:39:30,018 - INFO - joeynmt.training - Example #4
+2025-05-05 20:39:30,019 - INFO - joeynmt.training - 	Source:     Berichten zufolge hofft Indien darüber hinaus auf einen Vertrag zur Verteidigungszusammenarbeit zwischen den beiden Nationen .
+2025-05-05 20:39:30,019 - INFO - joeynmt.training - 	Reference:  India is also reportedly hoping for a deal on defence collaboration between the two nations .
+2025-05-05 20:39:30,019 - INFO - joeynmt.training - 	Hypothesis: the reports is also also also also in a Treaty on a Treaty between the two Nations .
+2025-05-05 20:40:26,420 - INFO - joeynmt.training - Epoch   2, Step:     5600, Batch Loss:     2.236685, Batch Acc: 0.383119, Tokens per Sec:     1576, Lr: 0.000300
+2025-05-05 20:41:25,174 - INFO - joeynmt.training - Epoch   2, Step:     5700, Batch Loss:     2.163031, Batch Acc: 0.381358, Tokens per Sec:     1548, Lr: 0.000300
+2025-05-05 20:42:23,009 - INFO - joeynmt.training - Epoch   2, Step:     5800, Batch Loss:     2.430201, Batch Acc: 0.388170, Tokens per Sec:     1608, Lr: 0.000300
+2025-05-05 20:43:19,894 - INFO - joeynmt.training - Epoch   2, Step:     5900, Batch Loss:     2.376049, Batch Acc: 0.392735, Tokens per Sec:     1604, Lr: 0.000300
+2025-05-05 20:44:16,901 - INFO - joeynmt.training - Epoch   2, Step:     6000, Batch Loss:     2.273019, Batch Acc: 0.397593, Tokens per Sec:     1629, Lr: 0.000300
+2025-05-05 20:44:16,902 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   5%|▌         | 26/500 [00:04<01:18,  6.00it/s]Predicting...:   9%|▊         | 43/500 [00:08<01:33,  4.87it/s]Predicting...:  12%|█▏        | 62/500 [00:12<01:32,  4.72it/s]Predicting...:  16%|█▋        | 82/500 [00:19<01:50,  3.78it/s]Predicting...:  21%|██        | 105/500 [00:22<01:24,  4.66it/s]Predicting...:  25%|██▌       | 126/500 [00:26<01:15,  4.93it/s]Predicting...:  30%|██▉       | 149/500 [00:29<01:02,  5.59it/s]Predicting...:  33%|███▎      | 165/500 [00:35<01:16,  4.39it/s]Predicting...:  36%|███▌      | 181/500 [00:39<01:12,  4.40it/s]Predicting...:  40%|████      | 201/500 [00:43<01:08,  4.35it/s]Predicting...:  44%|████▍     | 222/500 [00:47<00:58,  4.71it/s]Predicting...:  50%|████▉     | 248/500 [00:50<00:43,  5.81it/s]Predicting...:  54%|█████▍    | 272/500 [00:53<00:35,  6.41it/s]Predicting...:  59%|█████▉    | 297/500 [01:02<00:45,  4.51it/s]Predicting...:  63%|██████▎   | 317/500 [01:05<00:37,  4.92it/s]Predicting...:  69%|██████▉   | 346/500 [01:08<00:26,  5.86it/s]Predicting...:  73%|███████▎  | 366/500 [01:11<00:22,  5.98it/s]Predicting...:  80%|████████  | 400/500 [01:13<00:12,  7.83it/s]Predicting...:  86%|████████▌ | 429/500 [01:16<00:08,  8.78it/s]Predicting...:  89%|████████▉ | 447/500 [01:21<00:08,  6.39it/s]Predicting...:  93%|█████████▎| 465/500 [01:24<00:05,  6.64it/s]Predicting...:  97%|█████████▋| 486/500 [01:28<00:02,  6.16it/s]Predicting...: 100%|██████████| 500/500 [01:29<00:00,  6.51it/s]Predicting...: 100%|██████████| 500/500 [01:29<00:00,  5.56it/s]
+2025-05-05 20:45:46,847 - INFO - joeynmt.prediction - Evaluation result (greedy) loss:   2.59, ppl:  13.37, acc:   0.34, generation: 89.9321[sec], evaluation: 0.0000[sec]
+2025-05-05 20:45:46,852 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2025-05-05 20:45:47,064 - INFO - joeynmt.helpers - delete models/deen_transformer_prenorm/3500.ckpt
+2025-05-05 20:45:47,080 - INFO - joeynmt.training - Example #0
+2025-05-05 20:45:47,081 - INFO - joeynmt.training - 	Source:     die Premierminister Indiens und Japans trafen sich in Tokio .
+2025-05-05 20:45:47,081 - INFO - joeynmt.training - 	Reference:  India and Japan prime ministers meet in Tokyo
+2025-05-05 20:45:47,081 - INFO - joeynmt.training - 	Hypothesis: the price of the price of India and Japan .
+2025-05-05 20:45:47,081 - INFO - joeynmt.training - Example #1
+2025-05-05 20:45:47,082 - INFO - joeynmt.training - 	Source:     Indiens neuer Premierminister Narendra Modi trifft bei seinem ersten wichtigen Auslandsbesuch seit seinem Wahlsieg im Mai seinen japanischen Amtskollegen Shinzo Abe in Toko , um wirtschaftliche und sicherheitspolitische Beziehungen zu besprechen .
+2025-05-05 20:45:47,082 - INFO - joeynmt.training - 	Reference:  India &apos;s new prime minister , Narendra Modi , is meeting his Japanese counterpart , Shinzo Abe , in Tokyo to discuss economic and security ties , on his first major foreign visit since winning May &apos;s election .
+2025-05-05 20:45:47,082 - INFO - joeynmt.training - 	Hypothesis: India , the new priorities of Narth &apos;s first important exhibition of the South Azech , since the South Shahazech in the May of Shazech Azana , and economic and social social social and social social social relations .
+2025-05-05 20:45:47,082 - INFO - joeynmt.training - Example #2
+2025-05-05 20:45:47,082 - INFO - joeynmt.training - 	Source:     Herr Modi befindet sich auf einer fünftägigen Reise nach Japan , um die wirtschaftlichen Beziehungen mit der drittgrößten Wirtschaftsnation der Welt zu festigen .
+2025-05-05 20:45:47,082 - INFO - joeynmt.training - 	Reference:  Mr Modi is on a five @-@ day trip to Japan to strengthen economic ties with the third largest economy in the world .
+2025-05-05 20:45:47,082 - INFO - joeynmt.training - 	Hypothesis: Mr Modi is on a five of the world &apos;s own own own , to the economic economic economic relations with the global economic economic relations with the world world .
+2025-05-05 20:45:47,082 - INFO - joeynmt.training - Example #3
+2025-05-05 20:45:47,083 - INFO - joeynmt.training - 	Source:     Pläne für eine stärkere kerntechnische Zusammenarbeit stehen ganz oben auf der Tagesordnung .
+2025-05-05 20:45:47,083 - INFO - joeynmt.training - 	Reference:  high on the agenda are plans for greater nuclear co @-@ operation .
+2025-05-05 20:45:47,083 - INFO - joeynmt.training - 	Hypothesis: Pe for a more more than the most important technical cooperation , which is the agenda .
+2025-05-05 20:45:47,083 - INFO - joeynmt.training - Example #4
+2025-05-05 20:45:47,083 - INFO - joeynmt.training - 	Source:     Berichten zufolge hofft Indien darüber hinaus auf einen Vertrag zur Verteidigungszusammenarbeit zwischen den beiden Nationen .
+2025-05-05 20:45:47,083 - INFO - joeynmt.training - 	Reference:  India is also reportedly hoping for a deal on defence collaboration between the two nations .
+2025-05-05 20:45:47,084 - INFO - joeynmt.training - 	Hypothesis: the report also also also also the India &apos;s Treaty on a Treaty between both Nations .
+2025-05-05 20:46:47,657 - INFO - joeynmt.training - Epoch   2, Step:     6100, Batch Loss:     2.182014, Batch Acc: 0.390691, Tokens per Sec:     1510, Lr: 0.000300
+2025-05-05 20:47:53,583 - INFO - joeynmt.training - Epoch   2, Step:     6200, Batch Loss:     2.229769, Batch Acc: 0.394238, Tokens per Sec:     1390, Lr: 0.000300
+2025-05-05 20:48:51,845 - INFO - joeynmt.training - Epoch   2, Step:     6300, Batch Loss:     2.107227, Batch Acc: 0.403195, Tokens per Sec:     1591, Lr: 0.000300
+2025-05-05 20:49:45,843 - INFO - joeynmt.training - Epoch   2, Step:     6400, Batch Loss:     2.028868, Batch Acc: 0.408786, Tokens per Sec:     1690, Lr: 0.000300
+2025-05-05 20:50:48,624 - INFO - joeynmt.training - Epoch   2, Step:     6500, Batch Loss:     2.254274, Batch Acc: 0.406847, Tokens per Sec:     1427, Lr: 0.000300
+2025-05-05 20:50:48,626 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   5%|▌         | 26/500 [00:11<03:23,  2.33it/s]Predicting...:   9%|▊         | 43/500 [00:27<05:13,  1.46it/s]Predicting...:  12%|█▏        | 62/500 [00:31<03:34,  2.04it/s]Predicting...:  16%|█▋        | 82/500 [00:40<03:14,  2.15it/s]Predicting...:  21%|██        | 105/500 [00:46<02:29,  2.65it/s]Predicting...:  25%|██▌       | 126/500 [00:57<02:44,  2.28it/s]Predicting...:  30%|██▉       | 149/500 [01:03<02:09,  2.71it/s]Predicting...:  33%|███▎      | 165/500 [01:19<02:59,  1.87it/s]Predicting...:  36%|███▌      | 181/500 [01:32<03:12,  1.66it/s]Predicting...:  40%|████      | 201/500 [01:35<02:18,  2.15it/s]Predicting...:  44%|████▍     | 222/500 [01:46<02:15,  2.06it/s]Predicting...:  50%|████▉     | 248/500 [01:53<01:40,  2.51it/s]Predicting...:  54%|█████▍    | 272/500 [01:59<01:19,  2.85it/s]Predicting...:  59%|█████▉    | 297/500 [02:08<01:11,  2.84it/s]Predicting...:  63%|██████▎   | 317/500 [02:13<01:01,  2.98it/s]Predicting...:  69%|██████▉   | 346/500 [02:16<00:38,  4.02it/s]Predicting...:  73%|███████▎  | 366/500 [02:20<00:30,  4.35it/s]Predicting...:  80%|████████  | 400/500 [02:26<00:21,  4.67it/s]Predicting...:  86%|████████▌ | 429/500 [02:34<00:16,  4.25it/s]Predicting...:  89%|████████▉ | 447/500 [02:39<00:12,  4.23it/s]Predicting...:  93%|█████████▎| 465/500 [02:42<00:07,  4.44it/s]Predicting...:  97%|█████████▋| 486/500 [02:47<00:03,  4.43it/s]Predicting...: 100%|██████████| 500/500 [02:52<00:00,  3.94it/s]Predicting...: 100%|██████████| 500/500 [02:52<00:00,  2.90it/s]
+2025-05-05 20:53:40,996 - INFO - joeynmt.prediction - Evaluation result (greedy) loss:   2.55, ppl:  12.79, acc:   0.35, generation: 172.3580[sec], evaluation: 0.0000[sec]
+2025-05-05 20:53:41,000 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2025-05-05 20:53:41,183 - INFO - joeynmt.helpers - delete models/deen_transformer_prenorm/4000.ckpt
+2025-05-05 20:53:41,195 - INFO - joeynmt.training - Example #0
+2025-05-05 20:53:41,195 - INFO - joeynmt.training - 	Source:     die Premierminister Indiens und Japans trafen sich in Tokio .
+2025-05-05 20:53:41,196 - INFO - joeynmt.training - 	Reference:  India and Japan prime ministers meet in Tokyo
+2025-05-05 20:53:41,196 - INFO - joeynmt.training - 	Hypothesis: the prices and Japan and Japan and Japan , in Tokio .
+2025-05-05 20:53:41,196 - INFO - joeynmt.training - Example #1
+2025-05-05 20:53:41,196 - INFO - joeynmt.training - 	Source:     Indiens neuer Premierminister Narendra Modi trifft bei seinem ersten wichtigen Auslandsbesuch seit seinem Wahlsieg im Mai seinen japanischen Amtskollegen Shinzo Abe in Toko , um wirtschaftliche und sicherheitspolitische Beziehungen zu besprechen .
+2025-05-05 20:53:41,196 - INFO - joeynmt.training - 	Reference:  India &apos;s new prime minister , Narendra Modi , is meeting his Japanese counterpart , Shinzo Abe , in Tokyo to discuss economic and security ties , on his first major foreign visit since winning May &apos;s election .
+2025-05-05 20:53:41,196 - INFO - joeynmt.training - 	Hypothesis: India &apos;s new prices , the Narthus Shonourable Mico Shonourable , the first important exhibition of the Slovo Agreement , and the SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSEEEEEEEEAAAAAAAAAAAAAAAAAAAs , and SSSSSSSSSSSSSSSSSSSSSSSSS
+2025-05-05 20:53:41,196 - INFO - joeynmt.training - Example #2
+2025-05-05 20:53:41,197 - INFO - joeynmt.training - 	Source:     Herr Modi befindet sich auf einer fünftägigen Reise nach Japan , um die wirtschaftlichen Beziehungen mit der drittgrößten Wirtschaftsnation der Welt zu festigen .
+2025-05-05 20:53:41,197 - INFO - joeynmt.training - 	Reference:  Mr Modi is on a five @-@ day trip to Japan to strengthen economic ties with the third largest economy in the world .
+2025-05-05 20:53:41,197 - INFO - joeynmt.training - 	Hypothesis: Mr Modi is on a file of the world &apos;s economy to the economic relations with the reality of the world &apos;s economic relations with the world &apos;s economic relations .
+2025-05-05 20:53:41,197 - INFO - joeynmt.training - Example #3
+2025-05-05 20:53:41,197 - INFO - joeynmt.training - 	Source:     Pläne für eine stärkere kerntechnische Zusammenarbeit stehen ganz oben auf der Tagesordnung .
+2025-05-05 20:53:41,197 - INFO - joeynmt.training - 	Reference:  high on the agenda are plans for greater nuclear co @-@ operation .
+2025-05-05 20:53:41,197 - INFO - joeynmt.training - 	Hypothesis: Pe for a more more more than the environment .
+2025-05-05 20:53:41,197 - INFO - joeynmt.training - Example #4
+2025-05-05 20:53:41,198 - INFO - joeynmt.training - 	Source:     Berichten zufolge hofft Indien darüber hinaus auf einen Vertrag zur Verteidigungszusammenarbeit zwischen den beiden Nationen .
+2025-05-05 20:53:41,198 - INFO - joeynmt.training - 	Reference:  India is also reportedly hoping for a deal on defence collaboration between the two nations .
+2025-05-05 20:53:41,198 - INFO - joeynmt.training - 	Hypothesis: the reports , the fact that the Agency on the regulation on the two Nations .
+2025-05-05 20:54:47,153 - INFO - joeynmt.training - Epoch   2, Step:     6600, Batch Loss:     2.130080, Batch Acc: 0.407513, Tokens per Sec:     1387, Lr: 0.000300
+2025-05-05 20:55:48,530 - INFO - joeynmt.training - Epoch   2, Step:     6700, Batch Loss:     2.121788, Batch Acc: 0.410596, Tokens per Sec:     1496, Lr: 0.000300
+2025-05-05 20:56:48,225 - INFO - joeynmt.training - Epoch   2, Step:     6800, Batch Loss:     2.094307, Batch Acc: 0.411747, Tokens per Sec:     1539, Lr: 0.000300
+2025-05-05 20:57:43,434 - INFO - joeynmt.training - Epoch   2, Step:     6900, Batch Loss:     2.156744, Batch Acc: 0.411334, Tokens per Sec:     1660, Lr: 0.000300
+2025-05-05 20:58:37,277 - INFO - joeynmt.training - Epoch   2, Step:     7000, Batch Loss:     2.253664, Batch Acc: 0.412408, Tokens per Sec:     1703, Lr: 0.000300
+2025-05-05 20:58:37,278 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   5%|▌         | 26/500 [00:04<01:24,  5.59it/s]Predicting...:   9%|▊         | 43/500 [00:17<03:29,  2.19it/s]Predicting...:  12%|█▏        | 62/500 [00:20<02:27,  2.98it/s]Predicting...:  16%|█▋        | 82/500 [00:27<02:20,  2.98it/s]Predicting...:  21%|██        | 105/500 [00:30<01:42,  3.87it/s]Predicting...:  25%|██▌       | 126/500 [00:34<01:23,  4.45it/s]Predicting...:  30%|██▉       | 149/500 [00:36<01:06,  5.31it/s]Predicting...:  33%|███▎      | 165/500 [00:42<01:17,  4.31it/s]Predicting...:  36%|███▌      | 181/500 [00:45<01:08,  4.67it/s]Predicting...:  40%|████      | 201/500 [00:48<00:57,  5.24it/s]Predicting...:  44%|████▍     | 222/500 [00:51<00:51,  5.39it/s]Predicting...:  50%|████▉     | 248/500 [00:54<00:38,  6.58it/s]Predicting...:  54%|█████▍    | 272/500 [00:57<00:34,  6.70it/s]Predicting...:  59%|█████▉    | 297/500 [01:00<00:27,  7.28it/s]Predicting...:  63%|██████▎   | 317/500 [01:03<00:24,  7.45it/s]Predicting...:  69%|██████▉   | 346/500 [01:05<00:18,  8.38it/s]Predicting...:  73%|███████▎  | 366/500 [01:07<00:15,  8.66it/s]Predicting...:  80%|████████  | 400/500 [01:12<00:12,  8.03it/s]Predicting...:  86%|████████▌ | 429/500 [01:17<00:09,  7.43it/s]Predicting...:  89%|████████▉ | 447/500 [01:20<00:08,  6.60it/s]Predicting...:  93%|█████████▎| 465/500 [01:24<00:05,  5.89it/s]Predicting...:  97%|█████████▋| 486/500 [01:29<00:02,  5.64it/s]Predicting...: 100%|██████████| 500/500 [01:33<00:00,  4.66it/s]Predicting...: 100%|██████████| 500/500 [01:33<00:00,  5.32it/s]
+2025-05-05 21:00:11,266 - INFO - joeynmt.prediction - Evaluation result (greedy) loss:   2.50, ppl:  12.18, acc:   0.36, generation: 93.9771[sec], evaluation: 0.0000[sec]
+2025-05-05 21:00:11,269 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2025-05-05 21:00:11,465 - INFO - joeynmt.helpers - delete models/deen_transformer_prenorm/4500.ckpt
+2025-05-05 21:00:11,479 - INFO - joeynmt.training - Example #0
+2025-05-05 21:00:11,479 - INFO - joeynmt.training - 	Source:     die Premierminister Indiens und Japans trafen sich in Tokio .
+2025-05-05 21:00:11,479 - INFO - joeynmt.training - 	Reference:  India and Japan prime ministers meet in Tokyo
+2025-05-05 21:00:11,479 - INFO - joeynmt.training - 	Hypothesis: the primiererary ary ary and Japans and Japans .
+2025-05-05 21:00:11,480 - INFO - joeynmt.training - Example #1
+2025-05-05 21:00:11,480 - INFO - joeynmt.training - 	Source:     Indiens neuer Premierminister Narendra Modi trifft bei seinem ersten wichtigen Auslandsbesuch seit seinem Wahlsieg im Mai seinen japanischen Amtskollegen Shinzo Abe in Toko , um wirtschaftliche und sicherheitspolitische Beziehungen zu besprechen .
+2025-05-05 21:00:11,480 - INFO - joeynmt.training - 	Reference:  India &apos;s new prime minister , Narendra Modi , is meeting his Japanese counterpart , Shinzo Abe , in Tokyo to discuss economic and security ties , on his first major foreign visit since winning May &apos;s election .
+2025-05-05 21:00:11,480 - INFO - joeynmt.training - 	Hypothesis: India , Narendra Modi Modi Modi , the first important experts of the Shazech in the South Shhhonourable Shhho Abe Abe Abe Abe the SSSSSSSSSSSSSSSSSSSShhhhhhhonourable .
+2025-05-05 21:00:11,480 - INFO - joeynmt.training - Example #2
+2025-05-05 21:00:11,481 - INFO - joeynmt.training - 	Source:     Herr Modi befindet sich auf einer fünftägigen Reise nach Japan , um die wirtschaftlichen Beziehungen mit der drittgrößten Wirtschaftsnation der Welt zu festigen .
+2025-05-05 21:00:11,481 - INFO - joeynmt.training - 	Reference:  Mr Modi is on a five @-@ day trip to Japan to strengthen economic ties with the third largest economy in the world .
+2025-05-05 21:00:11,481 - INFO - joeynmt.training - 	Hypothesis: Mr Modi is on a fifth of the world &apos;s economic relations with the economic relations with the economic relations with the world &apos;s economic relations .
+2025-05-05 21:00:11,481 - INFO - joeynmt.training - Example #3
+2025-05-05 21:00:11,481 - INFO - joeynmt.training - 	Source:     Pläne für eine stärkere kerntechnische Zusammenarbeit stehen ganz oben auf der Tagesordnung .
+2025-05-05 21:00:11,481 - INFO - joeynmt.training - 	Reference:  high on the agenda are plans for greater nuclear co @-@ operation .
+2025-05-05 21:00:11,482 - INFO - joeynmt.training - 	Hypothesis: the Pe for a more more technical cooperation are very easy to the agenda .
+2025-05-05 21:00:11,482 - INFO - joeynmt.training - Example #4
+2025-05-05 21:00:11,482 - INFO - joeynmt.training - 	Source:     Berichten zufolge hofft Indien darüber hinaus auf einen Vertrag zur Verteidigungszusammenarbeit zwischen den beiden Nationen .
+2025-05-05 21:00:11,482 - INFO - joeynmt.training - 	Reference:  India is also reportedly hoping for a deal on defence collaboration between the two nations .
+2025-05-05 21:00:11,482 - INFO - joeynmt.training - 	Hypothesis: reports are also also also also also in a Treaty on the context of the two Nations .
+2025-05-05 21:01:15,401 - INFO - joeynmt.training - Epoch   2, Step:     7100, Batch Loss:     2.120754, Batch Acc: 0.419485, Tokens per Sec:     1440, Lr: 0.000300
+2025-05-05 21:02:20,524 - INFO - joeynmt.training - Epoch   2, Step:     7200, Batch Loss:     2.089068, Batch Acc: 0.419142, Tokens per Sec:     1424, Lr: 0.000300
+2025-05-05 21:03:22,722 - INFO - joeynmt.training - Epoch   2, Step:     7300, Batch Loss:     2.307400, Batch Acc: 0.418382, Tokens per Sec:     1465, Lr: 0.000300
+2025-05-05 21:04:21,723 - INFO - joeynmt.training - Epoch   2, Step:     7400, Batch Loss:     2.124225, Batch Acc: 0.425828, Tokens per Sec:     1528, Lr: 0.000300
+2025-05-05 21:05:19,237 - INFO - joeynmt.training - Epoch   2, Step:     7500, Batch Loss:     2.174247, Batch Acc: 0.420799, Tokens per Sec:     1621, Lr: 0.000300
+2025-05-05 21:05:19,238 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   5%|▌         | 26/500 [00:04<01:30,  5.26it/s]Predicting...:   9%|▊         | 43/500 [00:18<03:38,  2.09it/s]Predicting...:  12%|█▏        | 62/500 [00:22<02:44,  2.66it/s]Predicting...:  16%|█▋        | 82/500 [00:26<02:03,  3.38it/s]Predicting...:  21%|██        | 105/500 [00:36<02:17,  2.88it/s]Predicting...:  25%|██▌       | 126/500 [00:40<01:51,  3.36it/s]Predicting...:  30%|██▉       | 149/500 [00:44<01:30,  3.90it/s]Predicting...:  33%|███▎      | 165/500 [00:59<02:24,  2.32it/s]Predicting...:  36%|███▌      | 181/500 [01:13<02:57,  1.80it/s]Predicting...:  40%|████      | 201/500 [01:18<02:14,  2.23it/s]Predicting...:  44%|████▍     | 222/500 [01:21<01:36,  2.88it/s]Predicting...:  50%|████▉     | 248/500 [01:26<01:15,  3.35it/s]Predicting...:  54%|█████▍    | 272/500 [01:31<00:59,  3.86it/s]Predicting...:  59%|█████▉    | 297/500 [01:34<00:43,  4.70it/s]Predicting...:  63%|██████▎   | 317/500 [01:38<00:39,  4.67it/s]Predicting...:  69%|██████▉   | 346/500 [01:41<00:26,  5.86it/s]Predicting...:  73%|███████▎  | 366/500 [01:45<00:23,  5.63it/s]Predicting...:  80%|████████  | 400/500 [01:47<00:14,  7.12it/s]Predicting...:  86%|████████▌ | 429/500 [01:50<00:08,  7.92it/s]Predicting...:  89%|████████▉ | 447/500 [01:53<00:07,  7.27it/s]Predicting...:  93%|█████████▎| 465/500 [02:01<00:07,  4.82it/s]Predicting...:  97%|█████████▋| 486/500 [02:05<00:02,  5.09it/s]Predicting...: 100%|██████████| 500/500 [02:07<00:00,  5.42it/s]Predicting...: 100%|██████████| 500/500 [02:07<00:00,  3.93it/s]
+2025-05-05 21:07:26,334 - INFO - joeynmt.prediction - Evaluation result (greedy) loss:   2.45, ppl:  11.61, acc:   0.37, generation: 127.0843[sec], evaluation: 0.0000[sec]
+2025-05-05 21:07:26,340 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2025-05-05 21:07:26,560 - INFO - joeynmt.helpers - delete models/deen_transformer_prenorm/5000.ckpt
+2025-05-05 21:07:26,575 - INFO - joeynmt.training - Example #0
+2025-05-05 21:07:26,575 - INFO - joeynmt.training - 	Source:     die Premierminister Indiens und Japans trafen sich in Tokio .
+2025-05-05 21:07:26,575 - INFO - joeynmt.training - 	Reference:  India and Japan prime ministers meet in Tokyo
+2025-05-05 21:07:26,575 - INFO - joeynmt.training - 	Hypothesis: the price of India and Japan and Japan and Japan .
+2025-05-05 21:07:26,576 - INFO - joeynmt.training - Example #1
+2025-05-05 21:07:26,576 - INFO - joeynmt.training - 	Source:     Indiens neuer Premierminister Narendra Modi trifft bei seinem ersten wichtigen Auslandsbesuch seit seinem Wahlsieg im Mai seinen japanischen Amtskollegen Shinzo Abe in Toko , um wirtschaftliche und sicherheitspolitische Beziehungen zu besprechen .
+2025-05-05 21:07:26,576 - INFO - joeynmt.training - 	Reference:  India &apos;s new prime minister , Narendra Modi , is meeting his Japanese counterpart , Shinzo Abe , in Tokyo to discuss economic and security ties , on his first major foreign visit since winning May &apos;s election .
+2025-05-05 21:07:26,576 - INFO - joeynmt.training - 	Hypothesis: India &apos;s new primiererty , the Narendorse , in the first important exclusive , the first important exclusive in May , the Shonourable Shinzo Abe , in Toko Abe , in Toko Abe , and Shhonourable .
+2025-05-05 21:07:26,576 - INFO - joeynmt.training - Example #2
+2025-05-05 21:07:26,577 - INFO - joeynmt.training - 	Source:     Herr Modi befindet sich auf einer fünftägigen Reise nach Japan , um die wirtschaftlichen Beziehungen mit der drittgrößten Wirtschaftsnation der Welt zu festigen .
+2025-05-05 21:07:26,577 - INFO - joeynmt.training - 	Reference:  Mr Modi is on a five @-@ day trip to Japan to strengthen economic ties with the third largest economy in the world .
+2025-05-05 21:07:26,577 - INFO - joeynmt.training - 	Hypothesis: Mr Modi is located on a fifteen to Japan to Japan to the economic relations with the third largest economic relations with the world &apos;s economic relations with the world &apos;s economic relations .
+2025-05-05 21:07:26,577 - INFO - joeynmt.training - Example #3
+2025-05-05 21:07:26,577 - INFO - joeynmt.training - 	Source:     Pläne für eine stärkere kerntechnische Zusammenarbeit stehen ganz oben auf der Tagesordnung .
+2025-05-05 21:07:26,577 - INFO - joeynmt.training - 	Reference:  high on the agenda are plans for greater nuclear co @-@ operation .
+2025-05-05 21:07:26,577 - INFO - joeynmt.training - 	Hypothesis: Pe for a more technical cooperation are very serious technical cooperation .
+2025-05-05 21:07:26,577 - INFO - joeynmt.training - Example #4
+2025-05-05 21:07:26,578 - INFO - joeynmt.training - 	Source:     Berichten zufolge hofft Indien darüber hinaus auf einen Vertrag zur Verteidigungszusammenarbeit zwischen den beiden Nationen .
+2025-05-05 21:07:26,578 - INFO - joeynmt.training - 	Reference:  India is also reportedly hoping for a deal on defence collaboration between the two nations .
+2025-05-05 21:07:26,578 - INFO - joeynmt.training - 	Hypothesis: the success of the December of the Convention on the regulation on the two Nations .
+2025-05-05 21:08:25,999 - INFO - joeynmt.training - Epoch   2, Step:     7600, Batch Loss:     2.190143, Batch Acc: 0.427066, Tokens per Sec:     1541, Lr: 0.000300
+2025-05-05 21:09:23,704 - INFO - joeynmt.training - Epoch   2, Step:     7700, Batch Loss:     2.222328, Batch Acc: 0.425514, Tokens per Sec:     1609, Lr: 0.000300
+2025-05-05 21:10:19,192 - INFO - joeynmt.training - Epoch   2, Step:     7800, Batch Loss:     2.189669, Batch Acc: 0.433179, Tokens per Sec:     1645, Lr: 0.000300
+2025-05-05 21:11:20,776 - INFO - joeynmt.training - Epoch   2, Step:     7900, Batch Loss:     2.069720, Batch Acc: 0.427443, Tokens per Sec:     1497, Lr: 0.000300
+2025-05-05 21:12:22,563 - INFO - joeynmt.training - Epoch   2, Step:     8000, Batch Loss:     2.065831, Batch Acc: 0.433354, Tokens per Sec:     1478, Lr: 0.000300
+2025-05-05 21:12:22,565 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   5%|▌         | 26/500 [00:04<01:18,  6.04it/s]Predicting...:   9%|▊         | 43/500 [00:08<01:32,  4.92it/s]Predicting...:  12%|█▏        | 62/500 [00:14<01:51,  3.94it/s]Predicting...:  16%|█▋        | 82/500 [00:20<01:55,  3.62it/s]Predicting...:  21%|██        | 105/500 [00:26<01:42,  3.86it/s]Predicting...:  25%|██▌       | 126/500 [00:30<01:27,  4.26it/s]Predicting...:  30%|██▉       | 149/500 [00:34<01:15,  4.64it/s]Predicting...:  33%|███▎      | 165/500 [00:47<02:05,  2.67it/s]Predicting...:  36%|███▌      | 181/500 [01:01<02:39,  2.00it/s]Predicting...:  40%|████      | 201/500 [01:04<01:58,  2.52it/s]Predicting...:  44%|████▍     | 222/500 [01:08<01:29,  3.09it/s]Predicting...:  50%|████▉     | 248/500 [01:14<01:12,  3.47it/s]Predicting...:  54%|█████▍    | 272/500 [01:19<01:01,  3.68it/s]Predicting...:  59%|█████▉    | 297/500 [01:22<00:45,  4.50it/s]Predicting...:  63%|██████▎   | 317/500 [01:25<00:36,  4.99it/s]Predicting...:  69%|██████▉   | 346/500 [01:28<00:24,  6.36it/s]Predicting...:  73%|███████▎  | 366/500 [01:30<00:20,  6.55it/s]Predicting...:  80%|████████  | 400/500 [01:34<00:13,  7.55it/s]Predicting...:  86%|████████▌ | 429/500 [01:38<00:09,  7.48it/s]Predicting...:  89%|████████▉ | 447/500 [01:42<00:08,  6.45it/s]Predicting...:  93%|█████████▎| 465/500 [01:45<00:05,  6.04it/s]Predicting...:  97%|█████████▋| 486/500 [01:49<00:02,  6.18it/s]Predicting...: 100%|██████████| 500/500 [01:50<00:00,  6.42it/s]Predicting...: 100%|██████████| 500/500 [01:50<00:00,  4.50it/s]
+2025-05-05 21:14:13,575 - INFO - joeynmt.prediction - Evaluation result (greedy) loss:   2.42, ppl:  11.23, acc:   0.38, generation: 111.0002[sec], evaluation: 0.0000[sec]
+2025-05-05 21:14:13,578 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2025-05-05 21:14:13,754 - INFO - joeynmt.helpers - delete models/deen_transformer_prenorm/5500.ckpt
+2025-05-05 21:14:13,769 - INFO - joeynmt.training - Example #0
+2025-05-05 21:14:13,769 - INFO - joeynmt.training - 	Source:     die Premierminister Indiens und Japans trafen sich in Tokio .
+2025-05-05 21:14:13,769 - INFO - joeynmt.training - 	Reference:  India and Japan prime ministers meet in Tokyo
+2025-05-05 21:14:13,769 - INFO - joeynmt.training - 	Hypothesis: the price of India and Japan and Japan and Japan .
+2025-05-05 21:14:13,769 - INFO - joeynmt.training - Example #1
+2025-05-05 21:14:13,770 - INFO - joeynmt.training - 	Source:     Indiens neuer Premierminister Narendra Modi trifft bei seinem ersten wichtigen Auslandsbesuch seit seinem Wahlsieg im Mai seinen japanischen Amtskollegen Shinzo Abe in Toko , um wirtschaftliche und sicherheitspolitische Beziehungen zu besprechen .
+2025-05-05 21:14:13,770 - INFO - joeynmt.training - 	Reference:  India &apos;s new prime minister , Narendra Modi , is meeting his Japanese counterpart , Shinzo Abe , in Tokyo to discuss economic and security ties , on his first major foreign visit since winning May &apos;s election .
+2025-05-05 21:14:13,770 - INFO - joeynmt.training - 	Hypothesis: India &apos;s primary of Narendra Modi , in Toko , in the first important exclusive , since the Shind his his own own in May his own Abe in Toko , economic and security , political relations and the political relations .
+2025-05-05 21:14:13,770 - INFO - joeynmt.training - Example #2
+2025-05-05 21:14:13,770 - INFO - joeynmt.training - 	Source:     Herr Modi befindet sich auf einer fünftägigen Reise nach Japan , um die wirtschaftlichen Beziehungen mit der drittgrößten Wirtschaftsnation der Welt zu festigen .
+2025-05-05 21:14:13,770 - INFO - joeynmt.training - 	Reference:  Mr Modi is on a five @-@ day trip to Japan to strengthen economic ties with the third largest economy in the world .
+2025-05-05 21:14:13,770 - INFO - joeynmt.training - 	Hypothesis: Mr Modi is located on a fifth of the world &apos;s economic relations with the third largest economic relations with the third largest economic relations with the third largest economic relations .
+2025-05-05 21:14:13,771 - INFO - joeynmt.training - Example #3
+2025-05-05 21:14:13,771 - INFO - joeynmt.training - 	Source:     Pläne für eine stärkere kerntechnische Zusammenarbeit stehen ganz oben auf der Tagesordnung .
+2025-05-05 21:14:13,771 - INFO - joeynmt.training - 	Reference:  high on the agenda are plans for greater nuclear co @-@ operation .
+2025-05-05 21:14:13,771 - INFO - joeynmt.training - 	Hypothesis: Plane for a more technical cooperation are concerned about the agenda .
+2025-05-05 21:14:13,771 - INFO - joeynmt.training - Example #4
+2025-05-05 21:14:13,771 - INFO - joeynmt.training - 	Source:     Berichten zufolge hofft Indien darüber hinaus auf einen Vertrag zur Verteidigungszusammenarbeit zwischen den beiden Nationen .
+2025-05-05 21:14:13,771 - INFO - joeynmt.training - 	Reference:  India is also reportedly hoping for a deal on defence collaboration between the two nations .
+2025-05-05 21:14:13,771 - INFO - joeynmt.training - 	Hypothesis: the fact that India &apos;s limited by the Commission &apos;s context on the regulation of the two Nations .
+2025-05-05 21:15:05,959 - INFO - joeynmt.training - Epoch   2, Step:     8100, Batch Loss:     2.040271, Batch Acc: 0.434078, Tokens per Sec:     1716, Lr: 0.000300
+2025-05-05 21:15:22,167 - INFO - joeynmt.training - Epoch   2: total training loss 9270.40
+2025-05-05 21:15:22,168 - INFO - joeynmt.training - EPOCH 3
+2025-05-05 21:15:58,916 - INFO - joeynmt.training - Epoch   3, Step:     8200, Batch Loss:     2.192635, Batch Acc: 0.442568, Tokens per Sec:     1756, Lr: 0.000300
+2025-05-05 21:16:54,798 - INFO - joeynmt.training - Epoch   3, Step:     8300, Batch Loss:     1.900193, Batch Acc: 0.444442, Tokens per Sec:     1634, Lr: 0.000300
+2025-05-05 21:18:00,587 - INFO - joeynmt.training - Epoch   3, Step:     8400, Batch Loss:     2.074714, Batch Acc: 0.445439, Tokens per Sec:     1382, Lr: 0.000300
+2025-05-05 21:19:05,988 - INFO - joeynmt.training - Epoch   3, Step:     8500, Batch Loss:     2.268960, Batch Acc: 0.447390, Tokens per Sec:     1405, Lr: 0.000300
+2025-05-05 21:19:05,989 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   5%|▌         | 26/500 [00:04<01:18,  6.02it/s]Predicting...:   9%|▊         | 43/500 [00:08<01:30,  5.04it/s]Predicting...:  12%|█▏        | 62/500 [00:12<01:34,  4.62it/s]Predicting...:  16%|█▋        | 82/500 [00:18<01:38,  4.24it/s]Predicting...:  21%|██        | 105/500 [00:21<01:21,  4.84it/s]Predicting...:  25%|██▌       | 126/500 [00:32<01:58,  3.16it/s]Predicting...:  30%|██▉       | 149/500 [00:36<01:31,  3.82it/s]Predicting...:  33%|███▎      | 165/500 [00:41<01:28,  3.78it/s]Predicting...:  36%|███▌      | 181/500 [00:55<02:19,  2.29it/s]Predicting...:  40%|████      | 201/500 [01:00<01:50,  2.71it/s]Predicting...:  44%|████▍     | 222/500 [01:03<01:24,  3.30it/s]Predicting...:  50%|████▉     | 248/500 [01:06<00:58,  4.32it/s]Predicting...:  54%|█████▍    | 272/500 [01:09<00:45,  5.04it/s]Predicting...:  59%|█████▉    | 297/500 [01:12<00:35,  5.70it/s]Predicting...:  63%|██████▎   | 317/500 [01:15<00:30,  6.10it/s]Predicting...:  69%|██████▉   | 346/500 [01:17<00:20,  7.43it/s]Predicting...:  73%|███████▎  | 366/500 [01:21<00:19,  6.93it/s]Predicting...:  80%|████████  | 400/500 [01:23<00:11,  8.42it/s]Predicting...:  86%|████████▌ | 429/500 [01:28<00:09,  7.54it/s]Predicting...:  89%|████████▉ | 447/500 [01:34<00:09,  5.53it/s]Predicting...:  93%|█████████▎| 465/500 [01:37<00:06,  5.77it/s]Predicting...:  97%|█████████▋| 486/500 [01:40<00:02,  5.88it/s]Predicting...: 100%|██████████| 500/500 [01:43<00:00,  5.70it/s]Predicting...: 100%|██████████| 500/500 [01:43<00:00,  4.82it/s]
+2025-05-05 21:20:49,687 - INFO - joeynmt.prediction - Evaluation result (greedy) loss:   2.40, ppl:  11.01, acc:   0.39, generation: 103.6862[sec], evaluation: 0.0000[sec]
+2025-05-05 21:20:49,692 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2025-05-05 21:20:49,909 - INFO - joeynmt.helpers - delete models/deen_transformer_prenorm/6000.ckpt
+2025-05-05 21:20:49,919 - INFO - joeynmt.training - Example #0
+2025-05-05 21:20:49,919 - INFO - joeynmt.training - 	Source:     die Premierminister Indiens und Japans trafen sich in Tokio .
+2025-05-05 21:20:49,919 - INFO - joeynmt.training - 	Reference:  India and Japan prime ministers meet in Tokyo
+2025-05-05 21:20:49,919 - INFO - joeynmt.training - 	Hypothesis: the primierererererererererce in Tokio .
+2025-05-05 21:20:49,919 - INFO - joeynmt.training - Example #1
+2025-05-05 21:20:49,920 - INFO - joeynmt.training - 	Source:     Indiens neuer Premierminister Narendra Modi trifft bei seinem ersten wichtigen Auslandsbesuch seit seinem Wahlsieg im Mai seinen japanischen Amtskollegen Shinzo Abe in Toko , um wirtschaftliche und sicherheitspolitische Beziehungen zu besprechen .
+2025-05-05 21:20:49,920 - INFO - joeynmt.training - 	Reference:  India &apos;s new prime minister , Narendra Modi , is meeting his Japanese counterpart , Shinzo Abe , in Tokyo to discuss economic and security ties , on his first major foreign visit since winning May &apos;s election .
+2025-05-05 21:20:49,920 - INFO - joeynmt.training - 	Hypothesis: India &apos;s new primiererer Narendra Modi , in his first important exclusively for his first first in May in Munich , in May his his first first of the Morocco Abe in Toko Abe in Toko , economic and safety of political relations .
+2025-05-05 21:20:49,920 - INFO - joeynmt.training - Example #2
+2025-05-05 21:20:49,920 - INFO - joeynmt.training - 	Source:     Herr Modi befindet sich auf einer fünftägigen Reise nach Japan , um die wirtschaftlichen Beziehungen mit der drittgrößten Wirtschaftsnation der Welt zu festigen .
+2025-05-05 21:20:49,920 - INFO - joeynmt.training - 	Reference:  Mr Modi is on a five @-@ day trip to Japan to strengthen economic ties with the third largest economy in the world .
+2025-05-05 21:20:49,920 - INFO - joeynmt.training - 	Hypothesis: Mr Modi is located on a fiftempt to Japan to Japan to Japan to the world &apos;s economic relations with the world &apos;s economy .
+2025-05-05 21:20:49,920 - INFO - joeynmt.training - Example #3
+2025-05-05 21:20:49,921 - INFO - joeynmt.training - 	Source:     Pläne für eine stärkere kerntechnische Zusammenarbeit stehen ganz oben auf der Tagesordnung .
+2025-05-05 21:20:49,921 - INFO - joeynmt.training - 	Reference:  high on the agenda are plans for greater nuclear co @-@ operation .
+2025-05-05 21:20:49,921 - INFO - joeynmt.training - 	Hypothesis: Pe for a more more technical cooperation .
+2025-05-05 21:20:49,921 - INFO - joeynmt.training - Example #4
+2025-05-05 21:20:49,921 - INFO - joeynmt.training - 	Source:     Berichten zufolge hofft Indien darüber hinaus auf einen Vertrag zur Verteidigungszusammenarbeit zwischen den beiden Nationen .
+2025-05-05 21:20:49,921 - INFO - joeynmt.training - 	Reference:  India is also reportedly hoping for a deal on defence collaboration between the two nations .
+2025-05-05 21:20:49,921 - INFO - joeynmt.training - 	Hypothesis: reports from the same time , India &apos;s report on the contract on the context of the two Nations .
+2025-05-05 21:21:57,017 - INFO - joeynmt.training - Epoch   3, Step:     8600, Batch Loss:     1.938397, Batch Acc: 0.453288, Tokens per Sec:     1355, Lr: 0.000300
+2025-05-05 21:23:02,515 - INFO - joeynmt.training - Epoch   3, Step:     8700, Batch Loss:     2.013453, Batch Acc: 0.450063, Tokens per Sec:     1428, Lr: 0.000300
+2025-05-05 21:24:01,244 - INFO - joeynmt.training - Epoch   3, Step:     8800, Batch Loss:     2.019755, Batch Acc: 0.452684, Tokens per Sec:     1606, Lr: 0.000300
+2025-05-05 21:25:00,160 - INFO - joeynmt.training - Epoch   3, Step:     8900, Batch Loss:     1.948065, Batch Acc: 0.448669, Tokens per Sec:     1564, Lr: 0.000300
+2025-05-05 21:25:58,175 - INFO - joeynmt.training - Epoch   3, Step:     9000, Batch Loss:     1.935141, Batch Acc: 0.454031, Tokens per Sec:     1599, Lr: 0.000300
+2025-05-05 21:25:58,176 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   5%|▌         | 26/500 [00:05<01:32,  5.13it/s]Predicting...:   9%|▊         | 43/500 [00:09<01:39,  4.57it/s]Predicting...:  12%|█▏        | 62/500 [00:12<01:29,  4.90it/s]Predicting...:  16%|█▋        | 82/500 [00:16<01:22,  5.04it/s]Predicting...:  21%|██        | 105/500 [00:20<01:11,  5.53it/s]Predicting...:  25%|██▌       | 126/500 [00:23<01:07,  5.54it/s]Predicting...:  30%|██▉       | 149/500 [00:28<01:08,  5.12it/s]Predicting...:  33%|███▎      | 165/500 [00:34<01:17,  4.34it/s]Predicting...:  36%|███▌      | 181/500 [00:38<01:17,  4.11it/s]Predicting...:  40%|████      | 201/500 [00:42<01:08,  4.38it/s]Predicting...:  44%|████▍     | 222/500 [00:46<00:58,  4.75it/s]Predicting...:  50%|████▉     | 248/500 [00:49<00:43,  5.82it/s]Predicting...:  54%|█████▍    | 272/500 [00:52<00:37,  6.01it/s]Predicting...:  59%|█████▉    | 297/500 [00:56<00:31,  6.36it/s]Predicting...:  63%|██████▎   | 317/500 [00:59<00:29,  6.23it/s]Predicting...:  69%|██████▉   | 346/500 [01:02<00:21,  7.18it/s]Predicting...:  73%|███████▎  | 366/500 [01:05<00:19,  6.94it/s]Predicting...:  80%|████████  | 400/500 [01:08<00:11,  8.71it/s]Predicting...:  86%|████████▌ | 429/500 [01:11<00:08,  8.70it/s]Predicting...:  89%|████████▉ | 447/500 [01:15<00:07,  7.46it/s]Predicting...:  93%|█████████▎| 465/500 [01:21<00:06,  5.27it/s]Predicting...:  97%|█████████▋| 486/500 [01:25<00:02,  5.48it/s]Predicting...: 100%|██████████| 500/500 [01:27<00:00,  5.61it/s]Predicting...: 100%|██████████| 500/500 [01:27<00:00,  5.72it/s]
+2025-05-05 21:27:25,538 - INFO - joeynmt.prediction - Evaluation result (greedy) loss:   2.39, ppl:  10.94, acc:   0.39, generation: 87.3501[sec], evaluation: 0.0000[sec]
+2025-05-05 21:27:25,543 - INFO - joeynmt.training - Hooray! New best validation result [ppl]!
+2025-05-05 21:27:25,763 - INFO - joeynmt.helpers - delete models/deen_transformer_prenorm/6500.ckpt
+2025-05-05 21:27:25,774 - INFO - joeynmt.training - Example #0
+2025-05-05 21:27:25,775 - INFO - joeynmt.training - 	Source:     die Premierminister Indiens und Japans trafen sich in Tokio .
+2025-05-05 21:27:25,775 - INFO - joeynmt.training - 	Reference:  India and Japan prime ministers meet in Tokyo
+2025-05-05 21:27:25,775 - INFO - joeynmt.training - 	Hypothesis: the primierererererable in Tokio and Japans .
+2025-05-05 21:27:25,775 - INFO - joeynmt.training - Example #1
+2025-05-05 21:27:25,776 - INFO - joeynmt.training - 	Source:     Indiens neuer Premierminister Narendra Modi trifft bei seinem ersten wichtigen Auslandsbesuch seit seinem Wahlsieg im Mai seinen japanischen Amtskollegen Shinzo Abe in Toko , um wirtschaftliche und sicherheitspolitische Beziehungen zu besprechen .
+2025-05-05 21:27:25,776 - INFO - joeynmt.training - 	Reference:  India &apos;s new prime minister , Narendra Modi , is meeting his Japanese counterpart , Shinzo Abe , in Tokyo to discuss economic and security ties , on his first major foreign visit since winning May &apos;s election .
+2025-05-05 21:27:25,776 - INFO - joeynmt.training - 	Hypothesis: India , he was a first important expertise in the first important exercise of the Seminary America , in the May his own japanese , in the May of the America , in order of economic and security political groups .
+2025-05-05 21:27:25,776 - INFO - joeynmt.training - Example #2
+2025-05-05 21:27:25,777 - INFO - joeynmt.training - 	Source:     Herr Modi befindet sich auf einer fünftägigen Reise nach Japan , um die wirtschaftlichen Beziehungen mit der drittgrößten Wirtschaftsnation der Welt zu festigen .
+2025-05-05 21:27:25,777 - INFO - joeynmt.training - 	Reference:  Mr Modi is on a five @-@ day trip to Japan to strengthen economic ties with the third largest economy in the world .
+2025-05-05 21:27:25,777 - INFO - joeynmt.training - 	Hypothesis: Mr Modi is a fifteen to a fifteen to the economic relations with the third largest economic relations with the third largest economic relations .
+2025-05-05 21:27:25,777 - INFO - joeynmt.training - Example #3
+2025-05-05 21:27:25,777 - INFO - joeynmt.training - 	Source:     Pläne für eine stärkere kerntechnische Zusammenarbeit stehen ganz oben auf der Tagesordnung .
+2025-05-05 21:27:25,777 - INFO - joeynmt.training - 	Reference:  high on the agenda are plans for greater nuclear co @-@ operation .
+2025-05-05 21:27:25,777 - INFO - joeynmt.training - 	Hypothesis: Penorture for a more cserious technical cooperation .
+2025-05-05 21:27:25,777 - INFO - joeynmt.training - Example #4
+2025-05-05 21:27:25,778 - INFO - joeynmt.training - 	Source:     Berichten zufolge hofft Indien darüber hinaus auf einen Vertrag zur Verteidigungszusammenarbeit zwischen den beiden Nationen .
+2025-05-05 21:27:25,778 - INFO - joeynmt.training - 	Reference:  India is also reportedly hoping for a deal on defence collaboration between the two nations .
+2025-05-05 21:27:25,778 - INFO - joeynmt.training - 	Hypothesis: reports , the fact that India is also a Treaty on the regulation of the two Nations .
+2025-05-05 21:28:25,708 - INFO - joeynmt.training - Epoch   3, Step:     9100, Batch Loss:     1.928978, Batch Acc: 0.448846, Tokens per Sec:     1512, Lr: 0.000300
+2025-05-05 21:29:23,089 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-05 21:29:23,180 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-05 21:29:23,231 - INFO - joeynmt.helpers - Load model from /Users/zona/Desktop/homework/mt-exercise-03/models/deen_transformer_prenorm/9000.ckpt.
+2025-05-05 21:29:23,237 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4117),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4117),
+	loss_function=None)
+2025-05-05 21:29:23,242 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-05 21:29:23,242 - INFO - joeynmt.prediction - Predicting 500 example(s)... (Beam search with beam_size=5, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+Predicting...:   0%|          | 0/500 [00:00<?, ?it/s]Predicting...:   0%|          | 0/500 [00:02<?, ?it/s]
+Traceback (most recent call last):
+  File "/Applications/miniconda3/envs/torch3/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/Applications/miniconda3/envs/torch3/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/Users/zona/Desktop/homework/joeynmt-hotfixed/joeynmt/__main__.py", line 61, in <module>
+    main()
+  File "/Users/zona/Desktop/homework/joeynmt-hotfixed/joeynmt/__main__.py", line 41, in main
+    train(cfg_file=args.config_path, skip_test=args.skip_test)
+  File "/Users/zona/Desktop/homework/joeynmt-hotfixed/joeynmt/training.py", line 846, in train
+    test(
+  File "/Users/zona/Desktop/homework/joeynmt-hotfixed/joeynmt/prediction.py", line 430, in test
+    _, _, hypotheses, hypotheses_raw, seq_scores, att_scores, = predict(
+  File "/Users/zona/Desktop/homework/joeynmt-hotfixed/joeynmt/prediction.py", line 184, in predict
+    output, hyp_scores, attention_scores = search(
+  File "/Users/zona/Desktop/homework/joeynmt-hotfixed/joeynmt/search.py", line 730, in search
+    stacked_output, stacked_scores, stacked_attention_scores = beam_search(
+  File "/Users/zona/Desktop/homework/joeynmt-hotfixed/joeynmt/search.py", line 502, in beam_search
+    log_probs += topk_log_probs.view(-1).unsqueeze(1)  # add column-wise
+KeyboardInterrupt
